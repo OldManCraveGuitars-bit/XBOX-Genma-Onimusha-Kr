@@ -1,0 +1,95 @@
+{
+  "version": "v0.8-HDD-Text-Fix",
+  "base_version": "v0.8",
+  "default_xbe": {
+    "bytes": 3510272,
+    "sha256": "81a65ca47a0e5d72944895a7b0aa0eee609689c1aa0896041ce3c1a95f45664c"
+  },
+  "archive": {
+    "name": "XBOX-Genma-Onimusha-Kr-v0.8-HDD-Text-Fix.zip",
+    "bytes": 1447360,
+    "sha256": "4e7e9a1f5f2505e6d969ed731682d1ed89d635c4fda06229465908a7bd479235"
+  },
+  "native_output_conditions": 5219,
+  "body_pages": 3768,
+  "original_layout_sections": 23,
+  "korean_output_verified": true,
+  "physical_boot_verified": false,
+  "verification": {
+    "status": "passed",
+    "fixed_xbe_sha256": "81a65ca47a0e5d72944895a7b0aa0eee609689c1aa0896041ce3c1a95f45664c",
+    "source_xbe_sha256": "c6cad11380e0bdc8aa9eddc0e97748f589c681695ab745cbf6e79832babd16ad",
+    "original_layout_sections": 23,
+    "preload_bytes_match_all_previous_loaded_ranges": true,
+    "header_shared_page_refs_valid": true,
+    "retail_original_negative_controls_different": 19,
+    "korean_native_output_cases_exactly_equal": 5219,
+    "rx_protected_native_runs": 13136,
+    "checks": [
+      {
+        "module": "font_default_context",
+        "status": "passed",
+        "seconds": 0.02
+      },
+      {
+        "module": "font_resolution",
+        "status": "passed",
+        "seconds": 0.22
+      },
+      {
+        "module": "native_ui_test",
+        "status": "passed",
+        "seconds": 34.02
+      },
+      {
+        "module": "native_resident_test",
+        "status": "passed",
+        "seconds": 0.03
+      },
+      {
+        "module": "native_menu_test",
+        "status": "passed",
+        "seconds": 0.04
+      },
+      {
+        "module": "native_dialogue_center_r14",
+        "status": "passed",
+        "seconds": 8.81
+      },
+      {
+        "module": "native_opening_test",
+        "status": "passed",
+        "seconds": 6.83
+      },
+      {
+        "module": "native_cipher_test",
+        "status": "passed",
+        "seconds": 0.86
+      },
+      {
+        "module": "native_movie_test",
+        "status": "passed",
+        "seconds": 4.15
+      },
+      {
+        "module": "native_credit_test",
+        "status": "passed",
+        "seconds": 3.86
+      },
+      {
+        "module": "native_textproof",
+        "status": "passed",
+        "seconds": 123.02
+      },
+      {
+        "module": "native_context_review_r07",
+        "status": "passed",
+        "seconds": 6.81
+      }
+    ],
+    "stock_original_unmodified_xbe_supported": false,
+    "replacement_korean_glyphs_verified": true,
+    "physical_boot_verified": false,
+    "release_staging_unchanged": true
+  }
+}

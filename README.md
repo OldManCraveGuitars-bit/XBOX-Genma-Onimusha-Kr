@@ -6,6 +6,16 @@ Xbox용 **환마 귀무자 (Genma Onimusha)** 일본판 한국어 패치입니�
 
 **한글화: 기타 깎는 노인**
 
+## 원본 XBE 교체 후 한글 깨짐 수정
+
+**[HDD Text Fix ZIP 다운로드](https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/releases/download/v0.8/XBOX-Genma-Onimusha-Kr-v0.8-HDD-Text-Fix.zip)**
+
+일본판 원본 XBE로 교체한 뒤 글자가 깨지는 경우, 이 ZIP의 `default.xbe`를 **v0.8 한글 게임 폴더 최상단에 교체**하세요. 기존 파일을 먼저 백업하고, 나머지 한글화 데이터는 그대로 사용합니다.
+
+원본 23개 섹션 구조에 한글 처리 코드와 데이터를 유지한 수정본입니다. 본문 3,768페이지를 포함한 5,219개 네이티브 출력 조건이 정상 한글판과 일치했습니다. 실기 부팅과 전체 플레이는 미검증입니다.
+
+[상세 적용 방법과 SHA-256](https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/blob/main/docs/HDD-TEXT-FIX.md)
+
 [v0.8 다운로드](https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/releases/tag/v0.8) · [파일 해시](HASHES.md) · [검수 내역](docs/TEXT_REVIEW.md)
 
 ## 한글화 범위
