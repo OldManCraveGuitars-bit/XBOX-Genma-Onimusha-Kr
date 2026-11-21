@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "name": "same source and output",
+      "status": "passed"
+    },
+    {
+      "name": "existing output preserved",
+      "status": "passed"
+    },
+    {
+      "name": "wrong source size",
+      "status": "passed"
+    },
+    {
+      "name": "wrong output extension",
+      "status": "passed"
+    },
+    {
+      "name": "missing output directory",
+      "status": "passed"
+    },
+    {
+      "name": "missing source",
+      "status": "passed"
+    },
+    {
+      "name": "public EXE complete ISO reconstruction and independent SHA-256",
+      "status": "passed"
+    }
+  ],
+  "source_preserved": true,
+  "original_iso_sha256": "7f5af784f9b229c5d0061918e018a9052e328a5341efc7d9e1b5d36de5f58206",
+  "reconstructed_iso_sha256": "dbd207078fc41095afe805743277676214fc6e71d2cce2db30f0b161dc0f8dc2",
+  "reconstructed_bytes": 5385351168,
+  "patcher_sha256": "53e79ac531dc0c5a832bccc12f775b5c85af5575e773dcc3d3df2ad3d5a1c8c4",
+  "game_runtime_tested": false
+}

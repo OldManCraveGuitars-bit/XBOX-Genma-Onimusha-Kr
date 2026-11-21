@@ -1,0 +1,54 @@
+{
+  "text_review": {
+    "status": "passed_with_audio_limits",
+    "revision": "20261121-r16",
+    "bank_rows_checked": 3272,
+    "player_source_identities": 728,
+    "ui_rows": 327,
+    "document_books": 16,
+    "cipher_books": 4,
+    "movie_caption_cues": 85,
+    "opening_caption_cues": 36,
+    "image_labels_read": 614,
+    "current_korean_text_reread": true,
+    "fresh_japanese_proof_pages": 19,
+    "source_groups_corrected": 5,
+    "bank_row_changes": 5,
+    "changed_banks": 4,
+    "same_source_translation_variants_before": 5,
+    "same_source_translation_conflicts_after": 0,
+    "native_body_pages": 3768,
+    "changed_staged_files": 302,
+    "nonfont_images_and_movies_unchanged": true,
+    "new_native_text_cases": 14,
+    "overlap_and_clipping_checks": "passed",
+    "native_code_unchanged_from_r15": true,
+    "portable_editor_engine": "GenmaKoreanTool-r15.exe",
+    "editor_engine_changed": false,
+    "iso_sha256": "dbd207078fc41095afe805743277676214fc6e71d2cce2db30f0b161dc0f8dc2",
+    "exe_sha256": "10939c6af564bd02e10079dab708ca6beca0d9ba79502a07c6f9105c4a103247",
+    "xbe_sha256": "c6cad11380e0bdc8aa9eddc0e97748f589c681695ab745cbf6e79832babd16ad",
+    "audio_direct_hearing": false,
+    "audio_uncertain_cases": 2,
+    "physical_and_full_gameplay_tested": false
+  },
+  "iso_comparison": {
+    "source_sha256": "7f5af784f9b229c5d0061918e018a9052e328a5341efc7d9e1b5d36de5f58206",
+    "output_sha256": "dbd207078fc41095afe805743277676214fc6e71d2cce2db30f0b161dc0f8dc2",
+    "total_bytes_compared": 5385351168,
+    "original_prefix_bytes_compared": 4905566208,
+    "appended_bytes": 479784960,
+    "relocated_files": 305,
+    "changed_bytes": 7319733,
+    "unexpected_changed_bytes": 0,
+    "runtime_verified": false
+  },
+  "screenshots": {
+    "origin": "Previously recorded emulator execution captures; not a fresh v0.8 playthrough",
+    "images": [
+      "title.png",
+      "dialogue.png",
+      "opening-caption.png"
+    ]
+  }
+}

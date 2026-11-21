@@ -1,0 +1,7 @@
+/build/
+/dist/
+/patches/
+*.iso
+*.partial
+*.pyc
+__pycache__/

@@ -1,0 +1,4 @@
+53e79ac531dc0c5a832bccc12f775b5c85af5575e773dcc3d3df2ad3d5a1c8c4  XBOX-Genma-Onimusha-Kr-v0.8-Patcher.exe
+3859ee90301778c4a92549592e7b572fd3a80698db7d6fa6ef19fb97cf9f7a23  XBOX-Genma-Onimusha-Kr-v0.8-Windows-Patcher.zip
+e2e4b651ff21c93b1dc2e2486d73a7c500c939cffe18b17a8761f11993b404f2  XBOX-Genma-Onimusha-Kr-v0.8.xdelta
+214e71f8f0662dcd7db808aded6668fa30f9ed3ae797865c568f467ab385b20d  HASHES.txt
