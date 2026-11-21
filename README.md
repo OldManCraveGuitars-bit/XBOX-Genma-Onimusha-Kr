@@ -1,22 +1,20 @@
 ![환마 귀무자 한국어 타이틀 화면](docs/images/title.png)
 
-# XBOX-Genma-Onimusha-Kr · v0.8
+# XBOX-Genma-Onimusha-Kr · v0.801
 
 Xbox용 **환마 귀무자 (Genma Onimusha)** 일본판 한국어 패치입니다.
 
 **한글화: 기타 깎는 노인**
 
-## 원본 XBE 교체 후 한글 깨짐 수정
+## v0.801 테스트 업데이트
 
-**[HDD Text Fix ZIP 다운로드](https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/releases/download/v0.8/XBOX-Genma-Onimusha-Kr-v0.8-HDD-Text-Fix.zip)**
+**기존 v0.8 한글 게임 폴더의 `default.xbe`를 교체하는 업데이트입니다.**
 
-일본판 원본 XBE로 교체한 뒤 글자가 깨지는 경우, 이 ZIP의 `default.xbe`를 **v0.8 한글 게임 폴더 최상단에 교체**하세요. 기존 파일을 먼저 백업하고, 나머지 한글화 데이터는 그대로 사용합니다.
+[v0.801 다운로드](https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/releases/tag/v0.801) · [적용 방법](docs/releases/v0.801.md) · [파일 해시](HASHES-v0.801.md)
 
-원본 23개 섹션 구조에 한글 처리 코드와 데이터를 유지한 수정본입니다. 본문 3,768페이지를 포함한 5,219개 네이티브 출력 조건이 정상 한글판과 일치했습니다. 실기 부팅과 전체 플레이는 미검증입니다.
+이것도 한글 코드가 들어간 수정 XBE이며, 원본의 23개 섹션 구조를 사용합니다. 5,219개 네이티브 출력 검사를 통과했습니다. **실기 부팅과 전체 플레이는 미검증입니다.**
 
-[상세 적용 방법과 SHA-256](https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/blob/main/docs/HDD-TEXT-FIX.md)
-
-[v0.8 다운로드](https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/releases/tag/v0.8) · [파일 해시](HASHES.md) · [검수 내역](docs/TEXT_REVIEW.md)
+처음 설치할 때는 [v0.8 기본 한글 패치](https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/releases/tag/v0.8)를 먼저 적용하세요. v0.801에는 교체용 XBE와 적용 안내만 들어 있습니다.
 
 ## 한글화 범위
 
@@ -29,7 +27,7 @@ Xbox용 **환마 귀무자 (Genma Onimusha)** 일본판 한국어 패치입니�
 
 v0.8에는 내부 검수본 r16까지의 수정 사항을 담았습니다. 최신 텍스트 재검수에서 조사문 의미와 관찰 표현, 인물 말투 5행을 보완했으며, 확대 글꼴 처리 중 원본 범위를 벗어나는 읽기를 막는 수정도 포함합니다.
 
-## 다운로드와 적용
+## 기본 v0.8 다운로드와 적용
 
 1. [Releases](https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/releases/tag/v0.8)에서 **`XBOX-Genma-Onimusha-Kr-v0.8-Windows-Patcher.zip`**을 내려받고 압축을 풉니다.
 2. `XBOX-Genma-Onimusha-Kr-v0.8-Patcher.exe`를 실행합니다. 단독 EXE도 같은 기능을 제공합니다.
@@ -47,7 +45,7 @@ Windows 10/11 64비트용이며 Python 설치가 필요 없습니다. 출력 위
 - 크기: **4,905,566,208 bytes**
 - SHA-256: `7f5af784f9b229c5d0061918e018a9052e328a5341efc7d9e1b5d36de5f58206`
 
-### v0.8 결과 ISO
+### 기본 v0.8 결과 ISO
 
 - 크기: **5,385,351,168 bytes**
 - SHA-256: `dbd207078fc41095afe805743277676214fc6e71d2cce2db30f0b161dc0f8dc2`
