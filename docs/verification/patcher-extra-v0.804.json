@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "form_controls_within_client_area": true,
+  "cancel_during_actual_iso_generation": true,
+  "partial_output_removed": true,
+  "patcher_sha256": "2746f798e54877515dbe56d9b70d69713bc40b067241670b57efdf3b049ecd87",
+  "version": "v0.804"
+}

@@ -1,0 +1,152 @@
+{
+  "status": "passed",
+  "candidate_sha256": "7378d7fb559468c19250ac692d18e3a2b312447ef3f66eb58018b7f14ce9edfa",
+  "self_contained_single_iso_design": true,
+  "external_loader_required": false,
+  "external_plugin_required": false,
+  "external_xefu_config_required": false,
+  "original_sections_layout_and_flags_retained": 23,
+  "original_sections_payload_changes": [
+    {
+      "index": 0,
+      "name": ".text",
+      "changed_bytes": 206
+    },
+    {
+      "index": 1,
+      "name": "D3D",
+      "changed_bytes": 0
+    },
+    {
+      "index": 2,
+      "name": "XGRPH",
+      "changed_bytes": 0
+    },
+    {
+      "index": 3,
+      "name": "DSOUND",
+      "changed_bytes": 0
+    },
+    {
+      "index": 4,
+      "name": "BINK",
+      "changed_bytes": 0
+    },
+    {
+      "index": 5,
+      "name": "BINK32",
+      "changed_bytes": 0
+    },
+    {
+      "index": 6,
+      "name": "BINK32A",
+      "changed_bytes": 0
+    },
+    {
+      "index": 7,
+      "name": "BINK16",
+      "changed_bytes": 0
+    },
+    {
+      "index": 8,
+      "name": "BINK4444",
+      "changed_bytes": 0
+    },
+    {
+      "index": 9,
+      "name": "BINK5551",
+      "changed_bytes": 0
+    },
+    {
+      "index": 10,
+      "name": "BINK16MX",
+      "changed_bytes": 0
+    },
+    {
+      "index": 11,
+      "name": "BINK16X2",
+      "changed_bytes": 0
+    },
+    {
+      "index": 12,
+      "name": "BINK16M",
+      "changed_bytes": 0
+    },
+    {
+      "index": 13,
+      "name": "BINK32MX",
+      "changed_bytes": 0
+    },
+    {
+      "index": 14,
+      "name": "BINK32X2",
+      "changed_bytes": 0
+    },
+    {
+      "index": 15,
+      "name": "BINK32M",
+      "changed_bytes": 0
+    },
+    {
+      "index": 16,
+      "name": "XPP",
+      "changed_bytes": 0
+    },
+    {
+      "index": 17,
+      "name": ".rdata",
+      "changed_bytes": 0
+    },
+    {
+      "index": 18,
+      "name": ".data",
+      "changed_bytes": 1225
+    },
+    {
+      "index": 19,
+      "name": "DOLBY",
+      "changed_bytes": 0
+    },
+    {
+      "index": 20,
+      "name": "BINKDATA",
+      "changed_bytes": 0
+    },
+    {
+      "index": 21,
+      "name": "$$XTINFO",
+      "changed_bytes": 0
+    },
+    {
+      "index": 22,
+      "name": "$$XTIMAGE",
+      "changed_bytes": 0
+    }
+  ],
+  "certificate_full_bytes_equal": true,
+  "allowed_media_equal": true,
+  "region_equal": true,
+  "retail_entry_imports_tls_stack_heap_equal": true,
+  "retail_startup_allocation_arguments_equal": true,
+  "unchanged_kernel_imports": 116,
+  "new_kernel_imports": 0,
+  "original_preload_bytes": 5652480,
+  "candidate_preload_bytes": 6610944,
+  "additional_preload_bytes": 958464,
+  "preload_saved_vs_previous": 143360,
+  "normalized_injected_operations_equal_to_full_korean": true,
+  "normalized_instruction_count": 963,
+  "actual_code_pages_in_added_section": 3,
+  "added_section_pages": 234,
+  "native_texture_cases": 8,
+  "native_container_cases": 239,
+  "unresolved": [
+    "XeFu execution not tested",
+    "Mixed code and data still share one additional executable section; research warns about data decoding, not established as this report cause",
+    "Peak complete 64MB working set not measured",
+    "Changed signed header requires the existing environment to accept modified XBEs"
+  ],
+  "physical_boot_verified": false,
+  "xbox360_execution_verified": false,
+  "github_publication_allowed": false
+}

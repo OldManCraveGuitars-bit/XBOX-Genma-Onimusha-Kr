@@ -1,0 +1,112 @@
+{
+  "status": "passed",
+  "candidate_sha256": "7378d7fb559468c19250ac692d18e3a2b312447ef3f66eb58018b7f14ce9edfa",
+  "native_render_cases_equal": 5219,
+  "rx_protected_runs": 7917,
+  "checks": [
+    {
+      "module": "font_default_context",
+      "status": "passed",
+      "seconds": 0.02
+    },
+    {
+      "module": "font_resolution",
+      "status": "passed",
+      "seconds": 0.17
+    },
+    {
+      "module": "native_ui_test",
+      "status": "passed",
+      "seconds": 21.3
+    },
+    {
+      "module": "native_resident_test",
+      "status": "passed",
+      "seconds": 0.02
+    },
+    {
+      "module": "native_menu_test",
+      "status": "passed",
+      "seconds": 0.03
+    },
+    {
+      "module": "native_dialogue_center_r14",
+      "status": "passed",
+      "seconds": 5.94
+    },
+    {
+      "module": "native_opening_test",
+      "status": "passed",
+      "seconds": 4.9
+    },
+    {
+      "module": "native_cipher_test",
+      "status": "passed",
+      "seconds": 0.79
+    },
+    {
+      "module": "native_movie_test",
+      "status": "passed",
+      "seconds": 3.9
+    },
+    {
+      "module": "native_credit_test",
+      "status": "passed",
+      "seconds": 3.69
+    },
+    {
+      "module": "native_textproof",
+      "status": "passed",
+      "seconds": 81.78
+    },
+    {
+      "module": "native_context_review_r07",
+      "status": "passed",
+      "seconds": 3.85
+    }
+  ],
+  "pixel_checks": [
+    {
+      "file": "korean/xbe_ui_proof.png",
+      "rgba_sha256": "8f86cafdd6628039f4e79c57224070407985e31cb190226bece69aaa0aa2d8da"
+    },
+    {
+      "file": "native_textproof/common_dialogue.png",
+      "rgba_sha256": "a388beb367a10207aa6cb9ac8d48b2544209069bd45877147ffdd3a072e5bd40"
+    },
+    {
+      "file": "review_r07/cipher_10.screen.png",
+      "rgba_sha256": "30f4524d2b245bc51d329ce516eff702c0e2d6bb2413aa5d2a56765438ea60b0"
+    },
+    {
+      "file": "review_r07/cipher_11.screen.png",
+      "rgba_sha256": "445beff0da8d720b82f574fc049ddfdb186bcbbca11dd3c0dca921f6c951f266"
+    },
+    {
+      "file": "review_r07/cipher_12.screen.png",
+      "rgba_sha256": "85ba98cb522a392d5dd13818d9e2f20c6c067d5954783e7ea11724ed442977a1"
+    },
+    {
+      "file": "review_r07/cipher_13.screen.png",
+      "rgba_sha256": "e147e5266ce222450398b09f1d99965b0b0416926ca6a645d3b7a780967c9215"
+    },
+    {
+      "file": "review_r07/final_hdd.native-projection.png",
+      "rgba_sha256": "a804d3dc86030a0bed2199fac21d90a524d9b129e5024de7b8b4fefbc8b1d288"
+    },
+    {
+      "file": "review_r07/final_mu_absent.native-projection.png",
+      "rgba_sha256": "7bdbc6418794dc6dc0caf36a778b5afc12f9c31fc2f8c472d777b81f7da7bb62"
+    },
+    {
+      "file": "review_r07/final_mu_present.native-projection.png",
+      "rgba_sha256": "271e227a0396bd2e9d5d9a36c298a196cec592eb50874622466c719a84f612e0"
+    }
+  ],
+  "movie_and_credit_native_pixel_checks_passed": true,
+  "body_pages": 3768,
+  "korean_ui_rows": 327,
+  "physical_boot_verified": false,
+  "xbox360_execution_verified": false,
+  "github_publication_allowed": false
+}

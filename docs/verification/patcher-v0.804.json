@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "name": "same source and output",
+      "status": "passed"
+    },
+    {
+      "name": "existing output preserved",
+      "status": "passed"
+    },
+    {
+      "name": "wrong source size",
+      "status": "passed"
+    },
+    {
+      "name": "wrong output extension",
+      "status": "passed"
+    },
+    {
+      "name": "missing output directory",
+      "status": "passed"
+    },
+    {
+      "name": "missing source",
+      "status": "passed"
+    },
+    {
+      "name": "already patched ISO rejected",
+      "status": "passed"
+    },
+    {
+      "name": "public EXE complete ISO reconstruction and independent SHA-256",
+      "status": "passed"
+    },
+    {
+      "name": "disc entries, expected XBE and original certificate; complete ISO hash verified",
+      "status": "passed"
+    }
+  ],
+  "source_preserved": true,
+  "original_iso_sha256": "7f5af784f9b229c5d0061918e018a9052e328a5341efc7d9e1b5d36de5f58206",
+  "reconstructed_iso_sha256": "d1c5d44274ceef631e020ef8c2e04c1b855b64d27ea30717d3e142653ca7b877",
+  "reconstructed_bytes": 5385351168,
+  "patcher_sha256": "2746f798e54877515dbe56d9b70d69713bc40b067241670b57efdf3b049ecd87",
+  "content_audit": {
+    "status": "passed",
+    "entries": 1820,
+    "same_file_and_directory_names": true,
+    "default_xbe_bytes_identical_to_original": false,
+    "default_xbe_directory_record_unchanged": false,
+    "default_xbe_sha256": "7378d7fb559468c19250ac692d18e3a2b312447ef3f66eb58018b7f14ce9edfa",
+    "original_certificate_preserved": true,
+    "full_iso_hash_matches_independently_audited_target": true
+  },
+  "game_runtime_tested": false
+}

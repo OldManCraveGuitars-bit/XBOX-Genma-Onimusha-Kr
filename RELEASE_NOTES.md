@@ -1,65 +1,66 @@
-![환마 귀무자 한국어 타이틀](https://raw.githubusercontent.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/v0.802/docs/images/title.png)
+![환마 귀무자 v0.804 실제 타이틀 화면](https://raw.githubusercontent.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/v0.804/docs/images/title-v0.804.png)
 
-# XBOX-Genma-Onimusha-Kr · v0.802 원본 XBE 호환판
-
-Xbox용 **환마 귀무자 (Genma Onimusha)** 일본판 한국어 데이터 패치입니다.
+# 환마 귀무자 한국어 패치 v0.804 · 단일 ISO
 
 **한글화: 기타 깎는 노인**
 
-맨 위 타이틀 이미지는 기존 개발 캡처입니다. v0.802 실기 실행 캡처는 아닙니다.
+**일본판 원본 ISO에서 전체 한글화를 포함한 ISO 한 파일을 생성합니다.** 수정 default.xbe와 한글 데이터가 ISO 안에 포함되어 있으며, 한글화용 별도 로더·RAM 패처·플러그인·외부 설정 파일은 필요 없습니다. 기존 구엑박 게임 실행 환경과 일반적인 설치 절차는 필요합니다.
 
-**일본판 원본 ISO → 원본 XBE를 그대로 포함한 한글 ISO 한 파일**을 생성합니다. `default.xbe`의 실행 코드·문자열·헤더·서명·매체 설정을 수정하지 않습니다. 별도 로더나 실행 중 코드 패치도 사용하지 않습니다.
+맨 위는 **최종 v0.804 파일을 실행한 PC Cxbx Retail 모드의 실제 타이틀 캡처**입니다. **Xbox 360/XeFu와 실기 Xbox 실행은 미검증**입니다. 기존 실행 불가 제보를 해결했다고 확정한 배포물은 아니며, 이 한계를 표시한 사전 배포판입니다.
 
-## 다운로드와 적용
+## 다운로드·적용
 
-1. [v0.802 릴리스](https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/releases/tag/v0.802)에서 **`XBOX-Genma-Onimusha-Kr-v0.802-Windows-Patcher.zip`**을 내려받고 압축을 풉니다.
-2. `XBOX-Genma-Onimusha-Kr-v0.802-Patcher.exe`를 실행합니다. 단독 EXE도 같은 기능입니다.
-3. **`Genma Onimusha (Japan) (En,Ja)` 일본판 원본 ISO**를 선택합니다.
-4. 새 ISO 저장 위치를 지정하고 **한글 패치 시작**을 누릅니다.
-5. 결과 ISO와 내부 원본 XBE의 해시 검사가 끝날 때까지 기다립니다.
-6. 게임의 **문자 언어를 `日本語`(일본어)**로 두세요. 음성 설정은 별개입니다.
+1. 아래 Assets에서 **`XBOX-Genma-Onimusha-Kr-v0.804-Windows-Patcher.zip`**을 받고 압축을 풉니다. 단독 **Patcher.exe**도 같은 기능입니다.
+2. **`Genma Onimusha (Japan) (En,Ja)` 일본판 원본 ISO**와 새 ISO 저장 위치를 선택합니다.
+3. **한글 패치 시작**을 누르고 결과 ISO 및 내부 XBE 해시 검증이 끝날 때까지 기다립니다.
+4. 게임 문자 언어는 **日本語(일본어)**로 두세요. 음성 설정은 별개입니다.
 
-v0.8/v0.801 선행 적용이나 XBE 수동 교체는 필요 없습니다. 기존 한글판 사용자도 일본판 원본에서 새로 생성하세요.
+Windows 10/11 64비트용이며 Python 설치는 필요 없습니다. 출력 드라이브 6GB 이상, 임시 폴더 200MB 이상의 빈 공간이 필요합니다. 원본·기존 출력은 덮어쓰지 않습니다. 이전 한글 패치나 XBE 수동 교체 없이 **일본판 원본부터 적용**하세요.
 
-Windows 10/11 64비트용이며 Python 설치가 필요 없습니다. 출력 위치에 **6GB 이상**, 임시 폴더에 **200MB 이상**의 빈 공간이 필요합니다. 원본과 기존 출력 파일은 덮어쓰지 않습니다. 결과 ISO는 4GB를 넘으므로 NTFS 또는 exFAT에 저장하세요.
+결과는 4GB가 넘는 XDVDFS ISO입니다. NTFS/exFAT에 저장하고, Xbox/360의 기존 설치 방식에 맞게 일반적인 추출·변환 절차를 진행하세요. 5GB ISO 한 파일을 FATX에 그대로 복사할 수 있다는 뜻은 아닙니다. **게임 원본과 완성 ISO는 배포하지 않습니다.**
 
-## 호환판의 한글화 범위
+## 이번 버전
 
-- 대사·조사문·시스템 메시지 **3,272행**, 본문 **3,768페이지**를 원본 글자 출력 경로에 맞춰 재구성했습니다.
-- 타이틀·조작·설정·랭크 등 이미지에 들어간 한글은 데이터로 유지합니다.
-- 일반 문서와 지침서는 원래 읽기 화면과 스크롤 범위 안에서 **가로쓰기**를 사용합니다. 여러 쪽 문서는 쪽 번호를 표시하며, 이동 방향은 일본판의 원래 스크롤 방식을 따릅니다.
-- 암호책은 가상 문자와 원래 해금 영역을 유지하고, 각 영역 안에 한글 풀이를 넣습니다.
-- 원래 자막 표시 경로가 있는 영상 **2편(회상·엔딩)**은 원래 시간표와 이미지 칸을 사용해 한글화합니다.
+- v0.802에서 일본어로 남겼던 **메뉴·아이템명·설명·선택지 327행**의 한글 처리를 포함합니다.
+- 대사·조사문·시스템 메시지, 본문 **3,768페이지**, 문서·지침서·암호책 풀이와 이미지 UI를 포함합니다. 암호 기호·문서 해금·풀이 순서는 유지합니다.
+- 오프닝을 포함한 영상의 **시간 지정 자막 86개**와 한글 크레딧을 포함합니다. 전체 영상 끝까지의 재생 검증은 별개입니다.
+- 인게임 자막 가운데 정렬, 획득 문구 두 줄 배치, 선택지 간격, 문서의 종이 영역, 지도 제목 가운데 정렬, 시작 버튼 안내의 아래 이동을 반영합니다.
+- 랭크·조작·저장 화면과 암호책 탭·버튼을 보수한 전체 한글 리소스를 사용합니다.
+- 같은 자막 이미지 20건을 공유해 **추가 선행 로드 메모리를 143,360바이트 절약**했습니다. 기존 전체 한글판과 글자·좌표는 같습니다.
 
-**XBE 안에 고정된 아이템 이름·메뉴 문구·아이템 설명·선택지 327항목은 일본어 원문을 유지합니다.** 이전 수정 XBE에서 추가했던 오프닝 음성 자막·기타 영상 자막·한글 스크롤 크레딧은 포함하지 않습니다. 오프닝 편지 원화는 일본어 그대로 유지합니다.
+v0.803은 로컬 비교 후보였으며 공개판이 아닙니다. 이번 판은 XBE 무수정판이 아닙니다.
 
-영문 문자 모드는 이 데이터 배치의 지원 대상이 아닙니다. 문자 언어를 일본어로 선택하세요. 글꼴은 궁서 계열로 생성했습니다.
+## 일본판 형태 보존
 
-## 원본 보존과 검증
+원본 23개 섹션의 주소·길이·플래그·섹션 표 시작 위치, 진입점, 커널 참조 116개, TLS·시작 스택/힙 설정과 **인증서 전체·지역 0x2·허용 매체 0x2**를 유지합니다.
+
+한글 처리용 **KRDATA 섹션 1개**를 추가하고, 원본 .text 206바이트·.data 1,225바이트 및 관련 헤더·해시를 변경했습니다. 그 외 원본 21개 섹션 내용은 같습니다. XBE 전체가 원본과 같은 것은 아니며, 실행 환경이 수정 XBE를 허용해야 합니다. 파일·디렉터리 이름은 일본판과 같지만, 커진 번역 데이터의 ISO 위치까지 모두 일본판과 같지는 않습니다.
+
+## 확인한 내용과 남은 검증
+
+- 12개 검사 모듈 통과, 실제 x86 글자 배치 **5,219건** 일치, CPU 검사 이미지 9장 및 실제 GPU 타이틀 화면의 픽셀 일치.
+- 읽기·실행 전용 추가 공간에서 **7,917회** 실행, 텍스처 변환·스위즐 8건, 컨테이너 복사 239건 검사.
+- 최종 게임 파일 1,743개로 **PC Cxbx Retail 모드 초기화·영상 프레임 진행·타이틀 진입** 확인.
+- 기존 전체 한글 r16 대비 XBE 할당 영역·길이 필드 외 예상 밖 ISO 변경 **0바이트**. XBE의 불필요한 끝부분 143,360바이트 정리.
+- **배포 EXE로 원본에서 전체 ISO를 다시 생성**, 결과 SHA-256·내부 XBE·원본 인증서·파일 목록 확인. 잘못된 입력 거부·기존 파일 보존·생성 중 취소·미완성 출력 정리 검사.
+
+**Xbox 360/XeFu 부팅, 실기 Xbox 부팅, 전체 플레이, 모든 영상 전체 재생, 64MB 환경 전체 구간 최대 메모리 사용량은 미검증입니다.** PC 에뮬레이터 결과로 360 실행을 보장하지 않습니다.
+
+## 해시
 
 | 대상 | 크기 (bytes) | SHA-256 |
 | --- | ---: | --- |
 | 일본판 원본 ISO | 4,905,566,208 | `7f5af784f9b229c5d0061918e018a9052e328a5341efc7d9e1b5d36de5f58206` |
-| v0.802 호환판 결과 ISO | 5,370,583,040 | `57af5fbffc41aa59656841b07492027570211e1ddeeacb27b865631ae4d50688` |
-| ISO 내부 원본 default.xbe | 2,367,488 | `149f8392db82bbe092ce9b042310373e4645fa898624f57eea55a0c145885216` |
+| v0.804 결과 ISO | 5,385,351,168 | `d1c5d44274ceef631e020ef8c2e04c1b855b64d27ea30717d3e142653ca7b877` |
+| ISO 내부 수정 default.xbe | 3,325,952 | `7378d7fb559468c19250ac692d18e3a2b312447ef3f66eb58018b7f14ce9edfa` |
+| Windows Patcher.exe | 145,500,672 | `2746f798e54877515dbe56d9b70d69713bc40b067241670b57efdf3b049ecd87` |
 
-- XBE는 원본과 **바이트 단위로 동일**하며, ISO의 원래 위치와 디렉터리 기록도 그대로입니다. 원본 23개 섹션과 인증서·서명·실행 코드가 보존됩니다.
-- 전체 ISO의 **1,820개 항목**을 다시 읽고 원본과 모든 바이트를 비교했습니다. 허용한 데이터 변경 영역 밖의 변경은 **0바이트**입니다.
-- 원본 CPU 코드로 글꼴 변환·스위즐 **107종**을 검사했습니다. 원본 리소스 밖 읽기와 검사 영역 밖 쓰기가 없었습니다. GPU 드라이버 할당·잠금은 경계에서 대체한 검사입니다.
-- 원본 로더로 텍스트 리소스 **239개**를 처리하고, 모든 스크립트 복사가 원본 메모리 사용량 이내인지 확인했습니다.
-- 본문 **3,768페이지**, 선택지 **28조건**, 일반 문서·지침서 **18종**, 암호 해금 **64조건**, 원래 영상 자막 **15,376프레임**을 검사했습니다.
-- 배포할 Windows EXE에 일본판 ISO를 실제로 적용하여 전체 결과 ISO를 생성했습니다. 결과 SHA-256과 내부 XBE의 원본 일치를 독립적으로 다시 확인했습니다.
+[MD5·SHA-1·SHA-256 전체 목록](https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/blob/v0.804/HASHES-v0.804.md) · [검사 결과와 사용법](https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/tree/v0.804)
 
-**실기 Xbox 부팅과 전체 플레이는 미검증입니다.** 기존 실행 불가 제보의 원인을 확정하거나 실기 해결을 확정한 배포물로 표시하지 않습니다.
+## 한글 배치 검사 이미지
 
-[MD5·SHA-1·SHA-256 목록](https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/blob/v0.802/HASHES-v0.802.md) · [배포 파일 SHA-256](https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/blob/v0.802/SHA256SUMS.txt) · [원본 XBE 데이터 검사](https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/blob/v0.802/docs/verification/stock-xbe-v0.802.json) · [배포 EXE 실제 적용 검사](https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/blob/v0.802/docs/verification/patcher-v0.802.json)
+아래는 원본 x86 글자 배치 결과로 만든 **CPU 검사 이미지**입니다. 에뮬레이터·실기 실행 캡처가 아닙니다.
 
-## 데이터 출력 검사 이미지
+![메뉴·아이템·선택지 한글 배치](https://raw.githubusercontent.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/v0.804/docs/verification/v0.804/ui-proof.png)
 
-아래는 원본 x86 코드가 만든 좌표로 그린 CPU 검사 이미지입니다. 에뮬레이터나 실기 실행 캡처가 아닙니다.
-
-![원본 XBE 대사 출력 검사](https://raw.githubusercontent.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/v0.802/docs/verification/full-stock-xbe-text-proof.png)
-
-![원본 XBE 문서·암호책 출력 검사](https://raw.githubusercontent.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/v0.802/docs/verification/stock-documents-proof.png)
-
-![원본 XBE 영상 자막 출력 검사](https://raw.githubusercontent.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/v0.802/docs/verification/stock-native-captions-proof.png)
+![인게임 대사 한글 배치](https://raw.githubusercontent.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/v0.804/docs/verification/v0.804/dialogue-proof.png)

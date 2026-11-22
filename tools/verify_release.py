@@ -1,4 +1,4 @@
-"""Verify the configured EXE and its complete original-XBE result ISO."""
+"""Verify the configured EXE and independently inspect its complete result ISO."""
 import argparse,hashlib,json,subprocess,tempfile
 from pathlib import Path
 from disc import Disc
@@ -39,22 +39,37 @@ def main():
         result=json.loads(p.stdout);assert result['verified'] and result['sha256']==manifest['output']['sha256']
         assert output.stat().st_size==manifest['output']['bytes'] and sha(output)==manifest['output']['sha256']
         assert sha(args.source)==manifest['source']['sha256']
-        assert result['version']==manifest['version'] and result['stock_xbe_unchanged']
+        assert result['version']==manifest['version']
+        assert result['stock_xbe_unchanged']==manifest['stock_xbe_unchanged']
         assert result['default_xbe_sha256']==manifest['integrated_default_xbe']['sha256']
         cases.append(dict(name='public EXE complete ISO reconstruction and independent SHA-256',status='passed'))
         source_disc,target_disc=Disc(args.source),Disc(output)
         try:
             old={e['path']:e for e in source_disc.entries};new={e['path']:e for e in target_disc.entries}
             assert old.keys()==new.keys()
-            assert old['default.xbe']==new['default.xbe']
             s,t=old['default.xbe'],new['default.xbe']
             a=source_disc.read(s['offset'],s['size']);b=target_disc.read(t['offset'],t['size'])
-            assert a==b and hashlib.sha256(b).hexdigest()==manifest['integrated_default_xbe']['sha256']
-            content=dict(status='passed',entries=len(old),default_xbe_bytes_identical_to_original=True,
-                         default_xbe_directory_record_unchanged=True,default_xbe_sha256=hashlib.sha256(b).hexdigest(),
+            assert hashlib.sha256(b).hexdigest()==manifest['integrated_default_xbe']['sha256']
+            assert t['size']==manifest['integrated_default_xbe']['bytes']
+            assert t['offset']==manifest['integrated_default_xbe']['offset']
+            if manifest['stock_xbe_unchanged']:
+                assert a==b and s==t
+            else:
+                import struct
+                assert a!=b and struct.unpack_from('<I',b,0x11c)[0]==manifest['integrated_default_xbe']['sections']
+                def certificate(x):
+                    base=struct.unpack_from('<I',x,0x104)[0]
+                    at=struct.unpack_from('<I',x,0x118)[0]-base
+                    size=struct.unpack_from('<I',x,at)[0]
+                    return x[at:at+size]
+                assert certificate(a)==certificate(b)
+            content=dict(status='passed',entries=len(old),same_file_and_directory_names=True,
+                         default_xbe_bytes_identical_to_original=a==b,
+                         default_xbe_directory_record_unchanged=s==t,default_xbe_sha256=hashlib.sha256(b).hexdigest(),
+                         original_certificate_preserved=True,
                          full_iso_hash_matches_independently_audited_target=True)
         finally:source_disc.close();target_disc.close()
-        cases.append(dict(name='original XBE bytes and disc record preserved; complete ISO hash verified',status='passed'))
+        cases.append(dict(name='disc entries, expected XBE and original certificate; complete ISO hash verified',status='passed'))
         report=dict(status='passed',cases=cases,source_preserved=True,original_iso_sha256=manifest['source']['sha256'],
                     reconstructed_iso_sha256=manifest['output']['sha256'],reconstructed_bytes=output.stat().st_size,
                     patcher_sha256=manifest['patcher']['sha256'],content_audit=content,game_runtime_tested=False)

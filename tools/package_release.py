@@ -16,6 +16,9 @@ DECODER_HASH = '2081fb24a7b8a89d068b58e7d9353647d5fc1512a68bb6a37f71fc60ca84d943
 
 
 def main():
+    if not CONFIG['stock_xbe_unchanged']:
+        from package_single_iso_release import main as package_single_iso
+        return package_single_iso()
     ap = argparse.ArgumentParser()
     for name in ('source', 'target', 'decoder'):
         ap.add_argument('--' + name, type=Path, required=True)

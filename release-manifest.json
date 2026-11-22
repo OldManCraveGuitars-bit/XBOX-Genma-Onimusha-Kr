@@ -1,8 +1,7 @@
 {
-  "version": "v0.802",
-  "release_type": "stock-XBE data-only single ISO compatibility patcher",
+  "version": "v0.804",
+  "release_type": "self-contained full Korean single ISO patcher",
   "repository": "https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr",
-  "internal_content_revision": "20261122 stock-XBE compatibility data",
   "source": {
     "name": "Genma Onimusha (Japan) (En,Ja).iso",
     "bytes": 4905566208,
@@ -11,25 +10,25 @@
     "sha256": "7f5af784f9b229c5d0061918e018a9052e328a5341efc7d9e1b5d36de5f58206"
   },
   "output": {
-    "name": "XBOX-Genma-Onimusha-Kr-v0.802.iso",
-    "bytes": 5370583040,
-    "md5": "44e548dce724d8f6c3ef046277a4426f",
-    "sha1": "bae3d37706b6e5b6a7e8836f0a26b17359c27e1a",
-    "sha256": "57af5fbffc41aa59656841b07492027570211e1ddeeacb27b865631ae4d50688"
+    "name": "XBOX-Genma-Onimusha-Kr-v0.804.iso",
+    "bytes": 5385351168,
+    "md5": "690077da60854d66c861a2de477d4602",
+    "sha1": "6f3ace4d6d47eb14b6f676184e641ecbab6a55d4",
+    "sha256": "d1c5d44274ceef631e020ef8c2e04c1b855b64d27ea30717d3e142653ca7b877"
   },
   "patch": {
-    "name": "XBOX-Genma-Onimusha-Kr-v0.802.xdelta",
-    "bytes": 143901680,
-    "md5": "91a7f060122a83e9c96da025135f92ab",
-    "sha1": "021c600110a701e7fc985cb4ab23f40bfbe84238",
-    "sha256": "69a30e40b5a6eac41d944824a3d3ce38ad6c0d96fe9a32a198760ad02b9c8090"
+    "name": "XBOX-Genma-Onimusha-Kr-v0.804.xdelta",
+    "bytes": 145134362,
+    "md5": "feae12a2fe3b609cf135a5d7fefb8d0b",
+    "sha1": "e29d17ebd88d6c78581ac8451f968c4c1c24b83a",
+    "sha256": "b762e0cc4e4aab27031e333d1ebd55ee007056a2b5d665f067187991f2ccafea"
   },
   "patcher": {
-    "name": "XBOX-Genma-Onimusha-Kr-v0.802-Patcher.exe",
-    "bytes": 144267776,
-    "md5": "ff8b0a0e1010142b0c02588687403d8f",
-    "sha1": "64930e7f5e31653fe9c91d6a8a9004724f5f4feb",
-    "sha256": "4d4f8439821384cd1563923eb2b205a0e651d7406e6dc73f3e79134642aea353"
+    "name": "XBOX-Genma-Onimusha-Kr-v0.804-Patcher.exe",
+    "bytes": 145500672,
+    "md5": "a46258e7ee087ff170d48f1f16be3ea1",
+    "sha1": "da3fb254aac1a3d32ba4a7a4904588ff916a7e3f",
+    "sha256": "2746f798e54877515dbe56d9b70d69713bc40b067241670b57efdf3b049ecd87"
   },
   "decoder": {
     "version": "3.2.1",
@@ -39,51 +38,55 @@
     "sha256": "2081fb24a7b8a89d068b58e7d9353647d5fc1512a68bb6a37f71fc60ca84d943"
   },
   "integrated_default_xbe": {
-    "bytes": 2367488,
-    "offset": 542720,
-    "sha256": "149f8392db82bbe092ce9b042310373e4645fa898624f57eea55a0c145885216",
-    "sections": 23,
-    "unchanged_from_japanese_original": true
+    "bytes": 3325952,
+    "offset": 4905566208,
+    "sha256": "7378d7fb559468c19250ac692d18e3a2b312447ef3f66eb58018b7f14ce9edfa",
+    "sections": 24,
+    "unchanged_from_japanese_original": false
   },
-  "requires_existing_korean_v08_game_folder": false,
+  "stock_xbe_unchanged": false,
+  "original_certificate_preserved": true,
   "external_xbe_replacement_required": false,
-  "native_korean_pages": 3768,
-  "native_loader_cases": 239,
-  "fixed_ui_rows_retained_in_japanese": 327,
-  "additional_injected_opening_movie_credit_hooks": false,
-  "native_caption_movies": 2,
+  "external_runtime_loader_required": false,
+  "external_runtime_plugin_required": false,
+  "external_runtime_config_required": false,
+  "fixed_ui_rows_translated": 327,
+  "timed_movie_cues": 86,
+  "native_render_cases_equal": 5219,
+  "saved_preload_bytes": 143360,
   "text_language_setting": "Japanese",
-  "stock_xbe_unchanged": true,
+  "pc_cxbx_retail_title_verified": true,
   "physical_xbox_verified": false,
+  "xbox360_execution_verified": false,
   "full_gameplay_verified": false,
   "assets": [
     {
-      "name": "XBOX-Genma-Onimusha-Kr-v0.802-Patcher.exe",
-      "bytes": 144267776,
-      "md5": "ff8b0a0e1010142b0c02588687403d8f",
-      "sha1": "64930e7f5e31653fe9c91d6a8a9004724f5f4feb",
-      "sha256": "4d4f8439821384cd1563923eb2b205a0e651d7406e6dc73f3e79134642aea353"
+      "name": "XBOX-Genma-Onimusha-Kr-v0.804-Patcher.exe",
+      "bytes": 145500672,
+      "md5": "a46258e7ee087ff170d48f1f16be3ea1",
+      "sha1": "da3fb254aac1a3d32ba4a7a4904588ff916a7e3f",
+      "sha256": "2746f798e54877515dbe56d9b70d69713bc40b067241670b57efdf3b049ecd87"
     },
     {
-      "name": "XBOX-Genma-Onimusha-Kr-v0.802-Windows-Patcher.zip",
-      "bytes": 144119899,
-      "md5": "60966024d4156a787f13f8482ffefb90",
-      "sha1": "d1bd70bd2564625d2cb3e1e62b89b11a4d4594ad",
-      "sha256": "97afaf3deb70d2f7cab832e2f2f71c2449a9b42d2f9c95420d7849d07aedf4c9"
+      "name": "XBOX-Genma-Onimusha-Kr-v0.804-Windows-Patcher.zip",
+      "bytes": 145353010,
+      "md5": "ac92041459006e24f75a9951d5c1126f",
+      "sha1": "a0c7a0ddc6e9d44af6950f29ed5b701c22d9e9db",
+      "sha256": "6b925452772da4c3ad2e906ff429f9ed3332ad79197fcab03ecce86001d2bfb7"
     },
     {
-      "name": "XBOX-Genma-Onimusha-Kr-v0.802.xdelta",
-      "bytes": 143901680,
-      "md5": "91a7f060122a83e9c96da025135f92ab",
-      "sha1": "021c600110a701e7fc985cb4ab23f40bfbe84238",
-      "sha256": "69a30e40b5a6eac41d944824a3d3ce38ad6c0d96fe9a32a198760ad02b9c8090"
+      "name": "XBOX-Genma-Onimusha-Kr-v0.804.xdelta",
+      "bytes": 145134362,
+      "md5": "feae12a2fe3b609cf135a5d7fefb8d0b",
+      "sha1": "e29d17ebd88d6c78581ac8451f968c4c1c24b83a",
+      "sha256": "b762e0cc4e4aab27031e333d1ebd55ee007056a2b5d665f067187991f2ccafea"
     },
     {
-      "name": "XBOX-Genma-Onimusha-Kr-v0.802-HASHES.txt",
+      "name": "XBOX-Genma-Onimusha-Kr-v0.804-HASHES.txt",
       "bytes": 543,
-      "md5": "b67d8f22942ea9d5c89210505292adc5",
-      "sha1": "eb55cc4fc2d2ce1d652c8cb1d49f2c51e3823091",
-      "sha256": "c807771c3729d1ed46a2af6d164ed3e47d77d3fbf6dd7576e3e67643a8af9e72"
+      "md5": "59427fac7c21c2aec2696c8acfa7ef67",
+      "sha1": "454a76a546915d70ff6f4db7f5c2829109a50223",
+      "sha256": "d7cdfd8538d56b37dfca556e2d42b25ff05dac9ed1328cdf1a4a3e549384b1ea"
     }
   ],
   "windows_exe_roundtrip_verified": true,

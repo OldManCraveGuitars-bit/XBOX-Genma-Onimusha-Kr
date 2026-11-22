@@ -1,4 +1,4 @@
-4d4f8439821384cd1563923eb2b205a0e651d7406e6dc73f3e79134642aea353  XBOX-Genma-Onimusha-Kr-v0.802-Patcher.exe
-97afaf3deb70d2f7cab832e2f2f71c2449a9b42d2f9c95420d7849d07aedf4c9  XBOX-Genma-Onimusha-Kr-v0.802-Windows-Patcher.zip
-69a30e40b5a6eac41d944824a3d3ce38ad6c0d96fe9a32a198760ad02b9c8090  XBOX-Genma-Onimusha-Kr-v0.802.xdelta
-c807771c3729d1ed46a2af6d164ed3e47d77d3fbf6dd7576e3e67643a8af9e72  XBOX-Genma-Onimusha-Kr-v0.802-HASHES.txt
+2746f798e54877515dbe56d9b70d69713bc40b067241670b57efdf3b049ecd87  XBOX-Genma-Onimusha-Kr-v0.804-Patcher.exe
+6b925452772da4c3ad2e906ff429f9ed3332ad79197fcab03ecce86001d2bfb7  XBOX-Genma-Onimusha-Kr-v0.804-Windows-Patcher.zip
+b762e0cc4e4aab27031e333d1ebd55ee007056a2b5d665f067187991f2ccafea  XBOX-Genma-Onimusha-Kr-v0.804.xdelta
+d7cdfd8538d56b37dfca556e2d42b25ff05dac9ed1328cdf1a4a3e549384b1ea  XBOX-Genma-Onimusha-Kr-v0.804-HASHES.txt

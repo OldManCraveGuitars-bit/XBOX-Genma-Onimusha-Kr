@@ -1,0 +1,41 @@
+{
+  "status": "passed_title_observed",
+  "candidate_sha256": "7378d7fb559468c19250ac692d18e3a2b312447ef3f66eb58018b7f14ce9edfa",
+  "emulator": "Cxbx-Reloaded",
+  "console_mode": "Retail",
+  "native_gpu_capture": true,
+  "exact_candidate_without_qa_xbe_hooks": true,
+  "all_1743_game_files_present": true,
+  "video_frames_advanced": true,
+  "states": [
+    {
+      "movie_id": 4294967295,
+      "movie_frame": 0,
+      "bink_handle": 0,
+      "text_language": 0,
+      "subtitle_off": 0
+    },
+    {
+      "movie_id": 11,
+      "movie_frame": 2456,
+      "bink_handle": 226233536,
+      "text_language": 0,
+      "subtitle_off": 0
+    },
+    {
+      "movie_id": 4294967295,
+      "movie_frame": 3533,
+      "bink_handle": 0,
+      "text_language": 0,
+      "subtitle_off": 0
+    }
+  ],
+  "title_observed": true,
+  "title_pixels_equal_to_previous_full_korean": true,
+  "title_rgba_sha256": "b0fc1161dd41562c79c76f6a9595bf560c1e3e8dee014c6ccb01d5ac43b472ea",
+  "processes_stopped": true,
+  "external_runtime_korean_loader_used": false,
+  "external_runtime_plugin_used": false,
+  "physical_boot_verified": false,
+  "xbox360_execution_verified": false
+}

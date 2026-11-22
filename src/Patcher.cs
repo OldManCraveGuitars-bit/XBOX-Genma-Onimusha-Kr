@@ -112,7 +112,7 @@ namespace GenmaKorean {
             browseSource.Text=browseOutput.Text="찾아보기";
             browseSource.Click+=(s,e)=> { using(var d=new OpenFileDialog {Filter="Xbox ISO (*.iso)|*.iso",Title="일본판 원본 ISO 선택"}) if(d.ShowDialog()==DialogResult.OK) { source.Text=d.FileName; if(output.Text.Length==0) output.Text=Path.Combine(Path.GetDirectoryName(d.FileName),"XBOX-Genma-Onimusha-Kr-"+Resources.Version+".iso"); } };
             browseOutput.Click+=(s,e)=> { using(var d=new SaveFileDialog {Filter="Xbox ISO (*.iso)|*.iso",FileName="XBOX-Genma-Onimusha-Kr-"+Resources.Version+".iso",OverwritePrompt=true}) if(d.ShowDialog()==DialogResult.OK) output.Text=d.FileName; };
-            Controls.Add(new Label {Text="게임 문자 언어: 日本語. 아이템명·일부 메뉴는 일본어 원문입니다.",AutoSize=true,Location=new Point(20,176)});
+            Controls.Add(new Label {Text=Resources.StockXbe ? "게임 문자 언어: 日本語. 아이템명·일부 메뉴는 일본어 원문입니다." : "게임 문자 언어: 日本語. 메뉴·대사·문서·영상 자막 포함 / 수정 XBE 내장",AutoSize=true,Location=new Point(20,176)});
             status.SetBounds(20,197,620,25); status.Text="6GB 이상의 빈 공간이 필요합니다. Python 설치는 필요 없습니다."; Controls.Add(status);
             progress.SetBounds(20,226,620,18); Controls.Add(progress);
             apply.SetBounds(340,264,175,31); apply.Text="한글 패치 시작"; Controls.Add(apply);

@@ -1,14 +1,15 @@
 {
-  "version": "v0.802",
-  "assembly_version": "0.8.0.2",
-  "stock_xbe_unchanged": true,
+  "version": "v0.804",
+  "assembly_version": "0.8.0.4",
+  "stock_xbe_unchanged": false,
   "source_sha256": "7f5af784f9b229c5d0061918e018a9052e328a5341efc7d9e1b5d36de5f58206",
   "source_bytes": 4905566208,
-  "output_bytes": 5370583040,
-  "output_sha256": "57af5fbffc41aa59656841b07492027570211e1ddeeacb27b865631ae4d50688",
-  "xbe_bytes": 2367488,
-  "xbe_offset": 542720,
-  "xbe_sha256": "149f8392db82bbe092ce9b042310373e4645fa898624f57eea55a0c145885216",
-  "proof": "docs/verification/stock-xbe-v0.802.json",
-  "workflow": "일본판 원본 ISO → 원본 XBE를 유지한 한글 ISO 한 파일."
+  "output_bytes": 5385351168,
+  "output_sha256": "d1c5d44274ceef631e020ef8c2e04c1b855b64d27ea30717d3e142653ca7b877",
+  "xbe_bytes": 3325952,
+  "xbe_offset": 4905566208,
+  "xbe_sha256": "7378d7fb559468c19250ac692d18e3a2b312447ef3f66eb58018b7f14ce9edfa",
+  "proof": "docs/verification/v0.804/iso.json",
+  "verification_directory": "docs/verification/v0.804",
+  "workflow": "일본판 원본 ISO → 전체 한글화 ISO 한 파일. 별도 로더 불필요."
 }
