@@ -61,8 +61,12 @@ def main():
         release=next(r for r in json.loads(gh('api',f'repos/{REPO}/releases?per_page=100')) if r['tag_name']==tag)
     release_id=release['id']
     if release['draft']:
-        print('Uploading the verified assets to the draft release',flush=True)
-        gh('release','upload',tag,*assets,'--clobber','--repo',REPO)
+        uploaded={a['name']:a for a in release['assets']}
+        pending=[p for p in assets if p.name not in uploaded or uploaded[p.name].get('digest')!='sha256:'+sha(p)
+                 or uploaded[p.name]['size']!=p.stat().st_size]
+        if pending:
+            print('Uploading the verified assets to the draft release',flush=True)
+            gh('release','upload',tag,*pending,'--clobber','--repo',REPO)
     else:
         print('Release is already public; checking without replacing assets',flush=True)
     remote=json.loads(gh('api',f'repos/{REPO}/releases/{release_id}'))
@@ -72,7 +76,7 @@ def main():
         asset=found[path.name];digest=sha(path)
         assert asset['size']==path.stat().st_size and asset['digest']=='sha256:'+digest and asset['state']=='uploaded',path.name
         verified.append(dict(name=path.name,bytes=asset['size'],sha256=digest))
-    assert remote['body'].strip()==(ROOT/'RELEASE_NOTES.md').read_text('utf8').strip()
+    assert remote['body'].replace('\r\n','\n').strip()==(ROOT/'RELEASE_NOTES.md').read_text('utf8').strip()
     if remote['draft']:
         payload=ROOT/f'build/publish-{tag}.json'
         payload.write_text(json.dumps(dict(draft=False,prerelease=True,make_latest='false')),'utf8')
