@@ -1,0 +1,14 @@
+{
+  "version": "v0.802",
+  "assembly_version": "0.8.0.2",
+  "stock_xbe_unchanged": true,
+  "source_sha256": "7f5af784f9b229c5d0061918e018a9052e328a5341efc7d9e1b5d36de5f58206",
+  "source_bytes": 4905566208,
+  "output_bytes": 5370583040,
+  "output_sha256": "57af5fbffc41aa59656841b07492027570211e1ddeeacb27b865631ae4d50688",
+  "xbe_bytes": 2367488,
+  "xbe_offset": 542720,
+  "xbe_sha256": "149f8392db82bbe092ce9b042310373e4645fa898624f57eea55a0c145885216",
+  "proof": "docs/verification/stock-xbe-v0.802.json",
+  "workflow": "일본판 원본 ISO → 원본 XBE를 유지한 한글 ISO 한 파일."
+}

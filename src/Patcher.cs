@@ -9,10 +9,10 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Web.Script.Serialization;
 
-[assembly: AssemblyTitle("XBOX-Genma-Onimusha-Kr v0.801")]
+[assembly: AssemblyTitle(GenmaKorean.Resources.Title)]
 [assembly: AssemblyDescription("환마 귀무자 일본판 ISO 한국어 패치")]
-[assembly: AssemblyVersion("0.8.0.1")]
-[assembly: AssemblyFileVersion("0.8.0.1")]
+[assembly: AssemblyVersion(GenmaKorean.Resources.AssemblyVersion)]
+[assembly: AssemblyFileVersion(GenmaKorean.Resources.AssemblyVersion)]
 
 namespace GenmaKorean {
     public static class Engine {
@@ -39,7 +39,7 @@ namespace GenmaKorean {
             if(HashFile(destination)!=expected) throw new InvalidDataException("내장 패치 파일의 SHA-256이 일치하지 않습니다.");
             return destination;
         }
-        public static object Info() { return new {version="v0.801",source_bytes=SourceBytes,source_sha256=SourceHash,output_bytes=OutputBytes,output_sha256=OutputHash,patch_sha256=Resources.PatchHash,decoder_sha256=Resources.DecoderHash,output_format="single ISO",integrated_xbe_sha256=Resources.XbeHash}; }
+        public static object Info() { return new {version=Resources.Version,source_bytes=SourceBytes,source_sha256=SourceHash,output_bytes=OutputBytes,output_sha256=OutputHash,patch_sha256=Resources.PatchHash,decoder_sha256=Resources.DecoderHash,output_format="single ISO",integrated_xbe_sha256=Resources.XbeHash,stock_xbe_unchanged=Resources.StockXbe}; }
         public static object Apply(string sourcePath,string outputPath,CancellationToken cancel,Action<string,int> report) {
             sourcePath=Path.GetFullPath(sourcePath); outputPath=Path.GetFullPath(outputPath);
             if(String.Equals(sourcePath,outputPath,StringComparison.OrdinalIgnoreCase)) throw new IOException("원본과 출력 경로가 같습니다. 새 ISO 이름을 지정하세요.");
@@ -63,7 +63,7 @@ namespace GenmaKorean {
                     cancel.ThrowIfCancellationRequested();
                     work=Path.Combine(Path.GetTempPath(),"GenmaKr-"+Guid.NewGuid().ToString("N")); Directory.CreateDirectory(work);
                     string executable=Extract("decoder",Path.Combine(work,"xdelta3.exe"),Resources.DecoderHash);
-                    string patch=Extract("patch",Path.Combine(work,"v0.801.xdelta"),Resources.PatchHash);
+                    string patch=Extract("patch",Path.Combine(work,Resources.Version+".xdelta"),Resources.PatchHash);
                     partial=outputPath+"."+Guid.NewGuid().ToString("N")+".partial";
                     var start=new ProcessStartInfo(executable,"-d -D -R -s \""+sourcePath+"\" \""+patch+"\" \""+partial+"\"");
                     start.UseShellExecute=false; start.CreateNoWindow=true; start.RedirectStandardError=true;
@@ -80,12 +80,16 @@ namespace GenmaKorean {
                     using(var output=new FileStream(partial,FileMode.Open,FileAccess.Read,FileShare.Read)) {
                         if(output.Length!=OutputBytes) throw new InvalidDataException("결과 ISO 크기가 일치하지 않습니다.");
                         actual=Hash(output,cancel,p=>report("결과 ISO SHA-256 확인 중",75+p*24/100));
+                        output.Position=Resources.XbeOffset;
+                        byte[] xbe=new byte[Resources.XbeBytes]; int at=0;
+                        while(at<xbe.Length) { int n=output.Read(xbe,at,xbe.Length-at); if(n==0) throw new InvalidDataException("ISO 내부 XBE가 잘렸습니다."); at+=n; }
+                        using(var sha=SHA256.Create()) if(Hex(sha.ComputeHash(xbe))!=Resources.XbeHash) throw new InvalidDataException("ISO 내부 XBE 해시가 일치하지 않습니다.");
                     }
                     if(actual!=OutputHash) throw new InvalidDataException("결과 ISO SHA-256이 일치하지 않습니다. 완성 파일로 저장하지 않습니다.");
                     cancel.ThrowIfCancellationRequested();
                     File.Move(partial,outputPath); partial=null;
                     report("완료 — 결과 ISO 해시가 일치합니다.",100);
-                    return new {verified=true,version="v0.801",output=outputPath,bytes=OutputBytes,sha256=OutputHash,source_sha256=SourceHash};
+                    return new {verified=true,version=Resources.Version,output=outputPath,bytes=OutputBytes,sha256=OutputHash,source_sha256=SourceHash,stock_xbe_unchanged=Resources.StockXbe,default_xbe_sha256=Resources.XbeHash};
                 }
             } finally {
                 if(decoder!=null) { if(!decoder.HasExited) { decoder.Kill(); decoder.WaitForExit(); } decoder.Dispose(); }
@@ -101,13 +105,14 @@ namespace GenmaKorean {
         readonly Label status=new Label(); readonly ProgressBar progress=new ProgressBar();
         CancellationTokenSource cancellation; bool busy;
         public MainForm() {
-            Text="환마 귀무자 한국어 패치 v0.801"; ClientSize=new Size(660,315); FormBorderStyle=FormBorderStyle.FixedDialog; MaximizeBox=false; StartPosition=FormStartPosition.CenterScreen;
+            Text="환마 귀무자 한국어 패치 "+Resources.Version; ClientSize=new Size(660,315); FormBorderStyle=FormBorderStyle.FixedDialog; MaximizeBox=false; StartPosition=FormStartPosition.CenterScreen;
             var title=new Label {Text="환마 귀무자 · Genma Onimusha",AutoSize=true,Location=new Point(20,18),Font=new Font(SystemFonts.MessageBoxFont.FontFamily,15,FontStyle.Bold)}; Controls.Add(title);
-            Controls.Add(new Label {Text="일본판 원본 ISO → v0.801 통합 한글 ISO 한 파일. 원본은 보존합니다.",AutoSize=true,Location=new Point(20,56)});
+            Controls.Add(new Label {Text=Resources.Workflow,AutoSize=true,Location=new Point(20,56)});
             AddRow("원본 ISO",source,browseSource,88); AddRow("저장 위치",output,browseOutput,142);
             browseSource.Text=browseOutput.Text="찾아보기";
-            browseSource.Click+=(s,e)=> { using(var d=new OpenFileDialog {Filter="Xbox ISO (*.iso)|*.iso",Title="일본판 원본 ISO 선택"}) if(d.ShowDialog()==DialogResult.OK) { source.Text=d.FileName; if(output.Text.Length==0) output.Text=Path.Combine(Path.GetDirectoryName(d.FileName),"XBOX-Genma-Onimusha-Kr-v0.801.iso"); } };
-            browseOutput.Click+=(s,e)=> { using(var d=new SaveFileDialog {Filter="Xbox ISO (*.iso)|*.iso",FileName="XBOX-Genma-Onimusha-Kr-v0.801.iso",OverwritePrompt=true}) if(d.ShowDialog()==DialogResult.OK) output.Text=d.FileName; };
+            browseSource.Click+=(s,e)=> { using(var d=new OpenFileDialog {Filter="Xbox ISO (*.iso)|*.iso",Title="일본판 원본 ISO 선택"}) if(d.ShowDialog()==DialogResult.OK) { source.Text=d.FileName; if(output.Text.Length==0) output.Text=Path.Combine(Path.GetDirectoryName(d.FileName),"XBOX-Genma-Onimusha-Kr-"+Resources.Version+".iso"); } };
+            browseOutput.Click+=(s,e)=> { using(var d=new SaveFileDialog {Filter="Xbox ISO (*.iso)|*.iso",FileName="XBOX-Genma-Onimusha-Kr-"+Resources.Version+".iso",OverwritePrompt=true}) if(d.ShowDialog()==DialogResult.OK) output.Text=d.FileName; };
+            Controls.Add(new Label {Text="게임 문자 언어: 日本語. 아이템명·일부 메뉴는 일본어 원문입니다.",AutoSize=true,Location=new Point(20,176)});
             status.SetBounds(20,197,620,25); status.Text="6GB 이상의 빈 공간이 필요합니다. Python 설치는 필요 없습니다."; Controls.Add(status);
             progress.SetBounds(20,226,620,18); Controls.Add(progress);
             apply.SetBounds(340,264,175,31); apply.Text="한글 패치 시작"; Controls.Add(apply);

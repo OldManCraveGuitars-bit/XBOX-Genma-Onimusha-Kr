@@ -1,84 +1,76 @@
-![환마 귀무자 한국어 타이틀 화면](docs/images/title.png)
+![환마 귀무자 한국어 타이틀](docs/images/title.png)
 
-# XBOX-Genma-Onimusha-Kr · v0.801
+# XBOX-Genma-Onimusha-Kr · v0.802 원본 XBE 호환판
 
-Xbox용 **환마 귀무자 (Genma Onimusha)** 일본판 한국어 패치입니다.
+Xbox용 **환마 귀무자 (Genma Onimusha)** 일본판 한국어 데이터 패치입니다.
 
 **한글화: 기타 깎는 노인**
 
-**일본판 원본 ISO → v0.801 통합 한글 ISO 한 파일**로 바로 생성합니다. 한글 코드와 수정 XBE가 ISO 내부에 포함됩니다. v0.8 선행 적용이나 XBE 수동 교체는 필요 없습니다.
+맨 위 타이틀 이미지는 기존 개발 캡처입니다. v0.802 실기 실행 캡처는 아닙니다.
+
+**일본판 원본 ISO → 원본 XBE를 그대로 포함한 한글 ISO 한 파일**을 생성합니다. `default.xbe`의 실행 코드·문자열·헤더·서명·매체 설정을 수정하지 않습니다. 별도 로더나 실행 중 코드 패치도 사용하지 않습니다.
 
 ## 다운로드와 적용
 
-1. [v0.801 릴리스](https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/releases/tag/v0.801)에서 **`XBOX-Genma-Onimusha-Kr-v0.801-Windows-Patcher.zip`**을 내려받고 압축을 풉니다.
-2. `XBOX-Genma-Onimusha-Kr-v0.801-Patcher.exe`를 실행합니다. 단독 EXE도 같은 기능을 제공합니다.
+1. [v0.802 릴리스](https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr/releases/tag/v0.802)에서 **`XBOX-Genma-Onimusha-Kr-v0.802-Windows-Patcher.zip`**을 내려받고 압축을 풉니다.
+2. `XBOX-Genma-Onimusha-Kr-v0.802-Patcher.exe`를 실행합니다. 단독 EXE도 같은 기능입니다.
 3. **`Genma Onimusha (Japan) (En,Ja)` 일본판 원본 ISO**를 선택합니다.
 4. 새 ISO 저장 위치를 지정하고 **한글 패치 시작**을 누릅니다.
-5. 결과 ISO SHA-256 검증과 완료 메시지를 기다립니다. 완성되는 결과물은 **ISO 한 파일**입니다.
+5. 결과 ISO와 내부 원본 XBE의 해시 검사가 끝날 때까지 기다립니다.
+6. 게임의 **문자 언어를 `日本語`(일본어)**로 두세요. 음성 설정은 별개입니다.
 
-기존 v0.8 사용자도 일본판 원본 ISO에서 새로 생성하세요. 기존 한글 ISO에 중복 적용하지 않습니다. 앞서 배포했던 XBE 교체용 v0.801 ZIP은 이 통합 패처로 대체했습니다.
+v0.8/v0.801 선행 적용이나 XBE 수동 교체는 필요 없습니다. 기존 한글판 사용자도 일본판 원본에서 새로 생성하세요.
 
-Windows 10/11 64비트용이며 Python 설치가 필요 없습니다. 출력 위치에 **6GB 이상**, 임시 폴더에 **200MB 이상**의 빈 공간이 필요합니다. 결과 ISO는 4GB를 넘으므로 NTFS 또는 exFAT에 저장하세요. 원본과 기존 출력 파일은 덮어쓰지 않습니다.
+Windows 10/11 64비트용이며 Python 설치가 필요 없습니다. 출력 위치에 **6GB 이상**, 임시 폴더에 **200MB 이상**의 빈 공간이 필요합니다. 원본과 기존 출력 파일은 덮어쓰지 않습니다. 결과 ISO는 4GB를 넘으므로 NTFS 또는 exFAT에 저장하세요.
 
-게임 원본 ISO는 포함하지 않습니다. 다른 지역판·다른 추출 형식·이미 패치된 ISO는 지원하지 않습니다. 출력은 원본과 같은 XDVDFS 게임 이미지이며, 설치용 추출·변환은 사용하는 로더의 형식에 맞게 진행하세요.
+## 호환판의 한글화 범위
 
-### 지원 원본과 결과
+- 대사·조사문·시스템 메시지 **3,272행**, 본문 **3,768페이지**를 원본 글자 출력 경로에 맞춰 재구성했습니다.
+- 타이틀·조작·설정·랭크 등 이미지에 들어간 한글은 데이터로 유지합니다.
+- 일반 문서와 지침서는 원래 읽기 화면과 스크롤 범위 안에서 **가로쓰기**를 사용합니다. 여러 쪽 문서는 쪽 번호를 표시하며, 이동 방향은 일본판의 원래 스크롤 방식을 따릅니다.
+- 암호책은 가상 문자와 원래 해금 영역을 유지하고, 각 영역 안에 한글 풀이를 넣습니다.
+- 원래 자막 표시 경로가 있는 영상 **2편(회상·엔딩)**은 원래 시간표와 이미지 칸을 사용해 한글화합니다.
+
+**XBE 안에 고정된 아이템 이름·메뉴 문구·아이템 설명·선택지 327항목은 일본어 원문을 유지합니다.** 이전 수정 XBE에서 추가했던 오프닝 음성 자막·기타 영상 자막·한글 스크롤 크레딧은 포함하지 않습니다. 오프닝 편지 원화는 일본어 그대로 유지합니다.
+
+영문 문자 모드는 이 데이터 배치의 지원 대상이 아닙니다. 문자 언어를 일본어로 선택하세요. 글꼴은 궁서 계열로 생성했습니다.
+
+## 원본 보존과 검증
 
 | 대상 | 크기 (bytes) | SHA-256 |
 | --- | ---: | --- |
 | 일본판 원본 ISO | 4,905,566,208 | `7f5af784f9b229c5d0061918e018a9052e328a5341efc7d9e1b5d36de5f58206` |
-| v0.801 통합 결과 ISO | 5,388,861,440 | `189e10e695429dc212a70efc6f31a9dfdc41a18c50ecccad90d735d1a2a0468e` |
+| v0.802 호환판 결과 ISO | 5,370,583,040 | `57af5fbffc41aa59656841b07492027570211e1ddeeacb27b865631ae4d50688` |
+| ISO 내부 원본 default.xbe | 2,367,488 | `149f8392db82bbe092ce9b042310373e4645fa898624f57eea55a0c145885216` |
 
-MD5·SHA-1·SHA-256과 패처 해시는 [HASHES-v0.801.md](HASHES-v0.801.md), [SHA256SUMS.txt](SHA256SUMS.txt)에 있습니다. 패처는 적용 전후 SHA-256을 자동 확인합니다.
+- XBE는 원본과 **바이트 단위로 동일**하며, ISO의 원래 위치와 디렉터리 기록도 그대로입니다. 원본 23개 섹션과 인증서·서명·실행 코드가 보존됩니다.
+- 전체 ISO의 **1,820개 항목**을 다시 읽고 원본과 모든 바이트를 비교했습니다. 허용한 데이터 변경 영역 밖의 변경은 **0바이트**입니다.
+- 원본 CPU 코드로 글꼴 변환·스위즐 **107종**을 검사했습니다. 원본 리소스 밖 읽기와 검사 영역 밖 쓰기가 없었습니다. GPU 드라이버 할당·잠금은 경계에서 대체한 검사입니다.
+- 원본 로더로 텍스트 리소스 **239개**를 처리하고, 모든 스크립트 복사가 원본 메모리 사용량 이내인지 확인했습니다.
+- 본문 **3,768페이지**, 선택지 **28조건**, 일반 문서·지침서 **18종**, 암호 해금 **64조건**, 원래 영상 자막 **15,376프레임**을 검사했습니다.
+- 배포할 Windows EXE에 일본판 ISO를 실제로 적용하여 전체 결과 ISO를 생성했습니다. 결과 SHA-256과 내부 XBE의 원본 일치를 독립적으로 다시 확인했습니다.
 
-## 한글화 범위
+**실기 Xbox 부팅과 전체 플레이는 미검증입니다.** 기존 실행 불가 제보의 원인을 확정하거나 실기 해결을 확정한 배포물로 표시하지 않습니다.
 
-- 게임 대사, 조사문, 아이템 이름과 설명, 획득 메시지
-- 타이틀·설정·조작·저장·불러오기·지도·강화·결과 화면
-- 일반 문서와 지침서, 암호책의 설명, 이미지에 들어간 메뉴와 랭크
-- 영상 자막, 오프닝 편지 낭독 자막, 크레딧
+[MD5·SHA-1·SHA-256 목록](HASHES-v0.802.md) · [배포 파일 SHA-256](SHA256SUMS.txt) · [원본 XBE 데이터 검사](docs/verification/stock-xbe-v0.802.json) · [배포 EXE 실제 적용 검사](docs/verification/patcher-v0.802.json)
 
-궁서·붓글씨 계열로 게임 분위기를 맞췄습니다. 문서 읽기 방향과 종이 안쪽 여백, 메뉴 정렬, 선택지 간격, 숫자와 작은 글자의 가독성을 보수했습니다. 암호 퍼즐의 원래 문자와 수집 조건은 유지합니다. 오프닝 편지의 일본어 원화는 유지하고 음성에 맞춘 가로 한국어 자막을 표시합니다.
+## 데이터 출력 검사 이미지
 
-v0.8에는 내부 검수본 r16까지의 수정 사항을 담았습니다. 최신 텍스트 재검수에서 조사문 의미와 관찰 표현, 인물 말투 5행을 보완했으며, 확대 글꼴 처리 중 원본 범위를 벗어나는 읽기를 막는 수정도 포함합니다.
+아래는 원본 x86 코드가 만든 좌표로 그린 CPU 검사 이미지입니다. 에뮬레이터나 실기 실행 캡처가 아닙니다.
 
-## v0.801 변경 내용과 검사
+![원본 XBE 대사 출력 검사](docs/verification/full-stock-xbe-text-proof.png)
 
-v0.8의 전체 한글화 데이터와 검증된 v0.801 수정 XBE를 통합했습니다. 원본의 23개 섹션 구조와 기존 헤더·이름·참조 포인터 배치를 사용하고, HDD 매체 허용과 파일 끝 정렬을 보정했습니다. 한글 처리 코드·문자열·자막과 원본 타이틀 아이콘은 유지합니다. ISO 내부 XBE 역시 한글 코드가 들어간 수정 실행 파일입니다.
+![원본 XBE 문서·암호책 출력 검사](docs/verification/stock-documents-proof.png)
 
-- 배포 Windows EXE에 일본판 원본 ISO를 실제로 입력하여 전체 결과 ISO를 생성하고, 독립 SHA-256 검사까지 통과했습니다.
-- ISO의 1,820개 디렉터리 항목(파일 1,743개)을 검사했습니다. v0.8 대비 XBE 위치 정보와 추가된 수정 XBE 외의 기존 바이트는 모두 동일합니다.
-- 결과 ISO 내부 XBE가 기존 네이티브 검사 5,219조건을 통과한 파일과 바이트 단위로 일치합니다. 본문 3,768페이지, 글리프·메뉴·저장·선택지·문서·영상·크레딧 12종 검사 기록이 있습니다.
-- 원본 보존, 기존 출력 보존, 잘못된 원본·경로·확장자 및 중복 패치 입력 거부를 검사했습니다. 실제 ISO 생성 도중 취소한 뒤 미완성 출력이 정리되는 것도 확인했습니다.
-
-**실기 Xbox 부팅과 전체 플레이는 미검증입니다.** 데이터와 CPU 출력 검사 결과를 구분하여 공개하는 테스트 릴리스입니다. 제보된 실기 부팅 문제가 해결되었다고 확정하지 않습니다.
-
-## 스크린샷
-
-기존 개발 중 확보한 에뮬레이터 캡처이며, v0.801 실기 실행 캡처는 아닙니다.
-
-![한국어 대사](docs/images/dialogue.png)
-
-![오프닝 한국어 자막](docs/images/opening-caption.png)
-
-## 검수 기록
-
-노부나가의 오프닝 구호와 영상의 짧은 응답 2구간은 청취 미확정입니다. 원본 특수 방별 선택 분기 7행은 완전히 재현하지 못했습니다.
-
-- [통합 패처 실제 적용과 전체 ISO 검증](docs/verification/patcher-v0.801.json)
-- [수정 XBE 네이티브 출력 검사](docs/verification/hdd-text-fix.json)
-- [텍스트 재검수](docs/TEXT_REVIEW.md)
-- [기본 한글판 실기 호환성 데이터 검사](docs/HARDWARE_DATA_AUDIT.md)
+![원본 XBE 영상 자막 출력 검사](docs/verification/stock-native-captions-proof.png)
 
 ## 패처 소스 재빌드
 
-유지보수용 통합 이미지 조립 도구는 로컬 일본판 원본 ISO와 v0.8 ISO에서 동일한 v0.801 ISO를 만듭니다. 일반 사용자는 위 Windows 패처만 실행하면 됩니다.
+배포 `.xdelta`를 `patches/`에 두고, LZMA를 지원하는 [Xdelta 3.2.1](https://github.com/jmacd/xdelta/releases/tag/v3.2.1)의 전체 Windows x86-64 `xdelta3.exe`를 준비합니다. 패키징은 Python 3.11 이상과 Windows .NET Framework C# 컴파일러를 사용합니다. `release-config.json`의 원본·결과·XBE 해시를 확인합니다.
 
 ```powershell
-python tools/build_integrated_iso.py --original-iso "일본판 원본.iso" --base-iso "v0.8 결과.iso" --output "통합 v0.801.iso"
-python tools/make_patch.py --source "일본판 원본.iso" --target "통합 v0.801.iso" --xdelta "xdelta3.exe"
-python tools/package_release.py --source "일본판 원본.iso" --target "통합 v0.801.iso" --decoder "xdelta3.exe"
-python tools/verify_release.py --source "일본판 원본.iso" --base-v08 "v0.8 결과.iso" --output "검증 v0.801.iso"
+python tools/package_release.py --source "일본판 원본.iso" --target "v0.802 호환판.iso" --decoder "xdelta3.exe"
+python tools/verify_release.py --source "일본판 원본.iso" --patched-input "v0.802 호환판.iso" --output "검증용 새 ISO.iso"
 ```
 
-패키징은 Python 3.11 이상과 Windows .NET Framework C# 컴파일러를 사용합니다. [Xdelta 3.2.1](https://github.com/jmacd/xdelta/releases/tag/v3.2.1)의 LZMA 지원 Windows x86-64 `xdelta3.exe`가 필요합니다. 게임 자료와 완성 ISO는 저장소에 포함하지 않습니다. 외부 구성 요소의 출처와 라이선스는 [licenses](licenses/THIRD-PARTY.md)에 있습니다. 게임과 원본 그래픽의 권리는 각 권리자에게 있습니다.
+게임 원본 자료와 완성 ISO는 저장소·배포물에 포함하지 않습니다. 출력은 XDVDFS 게임 이미지이며, 설치용 추출·변환은 사용하는 로더의 형식에 맞게 진행하세요. 외부 구성 요소의 출처와 라이선스는 [licenses](licenses/THIRD-PARTY.md)에 있습니다.

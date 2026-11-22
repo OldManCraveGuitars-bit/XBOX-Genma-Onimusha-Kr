@@ -1,19 +1,19 @@
-# v0.801 통합 ISO 패처 파일 해시
+# v0.802 원본 XBE 호환판 파일 해시
 
 | 대상 | 크기 (bytes) | MD5 | SHA-1 | SHA-256 |
 | --- | ---: | --- | --- | --- |
 | 일본판 원본 ISO | 4,905,566,208 | `c6c38cc8f904882fb5f44736474c487d` | `69c244b4fa40f3cacd684a72331305bec58406d8` | `7f5af784f9b229c5d0061918e018a9052e328a5341efc7d9e1b5d36de5f58206` |
-| v0.801 통합 결과 ISO | 5,388,861,440 | `d4edfb283af0734bef9d67d6322d5012` | `262e31227484a55aede6624458b439225e55af2f` | `189e10e695429dc212a70efc6f31a9dfdc41a18c50ecccad90d735d1a2a0468e` |
-| XBOX-Genma-Onimusha-Kr-v0.801-Patcher.exe | 146,926,592 | `55b0f2e3c2432da6d498bdb74c2e4820` | `9f8d3768e333bee9a019d5c1e97c4063c7818b81` | `526aa3fc2d91ebbef3b1ee25bd8b14d81799e9100975dfd0a82b6cbd1076bfd3` |
-| XBOX-Genma-Onimusha-Kr-v0.801.xdelta | 146,561,873 | `faf95c8249e893cdceb28678034dbb13` | `007b4adf15ad3b29bdec0d268d943c92ab477cad` | `5b9737868641cc105f3850cfca8bfefb70c60e7d7df47dcaab7ea9bea8ce71b9` |
+| v0.802 원본 XBE 호환판 ISO | 5,370,583,040 | `44e548dce724d8f6c3ef046277a4426f` | `bae3d37706b6e5b6a7e8836f0a26b17359c27e1a` | `57af5fbffc41aa59656841b07492027570211e1ddeeacb27b865631ae4d50688` |
+| XBOX-Genma-Onimusha-Kr-v0.802-Patcher.exe | 144,267,776 | `ff8b0a0e1010142b0c02588687403d8f` | `64930e7f5e31653fe9c91d6a8a9004724f5f4feb` | `4d4f8439821384cd1563923eb2b205a0e651d7406e6dc73f3e79134642aea353` |
+| XBOX-Genma-Onimusha-Kr-v0.802.xdelta | 143,901,680 | `91a7f060122a83e9c96da025135f92ab` | `021c600110a701e7fc985cb4ab23f40bfbe84238` | `69a30e40b5a6eac41d944824a3d3ce38ad6c0d96fe9a32a198760ad02b9c8090` |
 
-ISO 내부 `default.xbe` SHA-256: `81a65ca47a0e5d72944895a7b0aa0eee609689c1aa0896041ce3c1a95f45664c`
+ISO 내부 `default.xbe` SHA-256: `149f8392db82bbe092ce9b042310373e4645fa898624f57eea55a0c145885216`
 
 ## 배포 파일 SHA-256
 
 ```text
-526aa3fc2d91ebbef3b1ee25bd8b14d81799e9100975dfd0a82b6cbd1076bfd3  XBOX-Genma-Onimusha-Kr-v0.801-Patcher.exe
-7abf6b8ca611e5f731070ca6e8a10b3bb9e453c71a62255dcf39eb1c41bbe3d2  XBOX-Genma-Onimusha-Kr-v0.801-Windows-Patcher.zip
-5b9737868641cc105f3850cfca8bfefb70c60e7d7df47dcaab7ea9bea8ce71b9  XBOX-Genma-Onimusha-Kr-v0.801.xdelta
-5f8853d66b577032804b5150b613c57c874ea0eea37b82981e93a3f9b153c539  XBOX-Genma-Onimusha-Kr-v0.801-HASHES.txt
+4d4f8439821384cd1563923eb2b205a0e651d7406e6dc73f3e79134642aea353  XBOX-Genma-Onimusha-Kr-v0.802-Patcher.exe
+97afaf3deb70d2f7cab832e2f2f71c2449a9b42d2f9c95420d7849d07aedf4c9  XBOX-Genma-Onimusha-Kr-v0.802-Windows-Patcher.zip
+69a30e40b5a6eac41d944824a3d3ce38ad6c0d96fe9a32a198760ad02b9c8090  XBOX-Genma-Onimusha-Kr-v0.802.xdelta
+c807771c3729d1ed46a2af6d164ed3e47d77d3fbf6dd7576e3e67643a8af9e72  XBOX-Genma-Onimusha-Kr-v0.802-HASHES.txt
 ```

@@ -1,7 +1,7 @@
-"""Verify v0.801 EXE guards, reconstruct its ISO, and audit all game data."""
+"""Verify the configured EXE and its complete original-XBE result ISO."""
 import argparse,hashlib,json,subprocess,tempfile
 from pathlib import Path
-from build_integrated_iso import audit
+from disc import Disc
 
 ROOT=Path(__file__).resolve().parents[1]
 def sha(path):
@@ -9,7 +9,7 @@ def sha(path):
 
 def main():
     ap=argparse.ArgumentParser()
-    for name in ('source','base-v08','output'):ap.add_argument('--'+name,type=Path,required=True)
+    for name in ('source','patched-input','output'):ap.add_argument('--'+name,type=Path,required=True)
     args=ap.parse_args()
     manifest=json.loads((ROOT/'release-manifest.json').read_text('utf8'))
     exe=ROOT/'dist'/manifest['patcher']['name'];assert sha(exe)==manifest['patcher']['sha256']
@@ -27,7 +27,7 @@ def main():
         reject('wrong output extension',args.source,tmp/'result.bin','확장자')
         reject('missing output directory',args.source,tmp/'missing/result.iso','출력 폴더')
         reject('missing source',tmp/'missing.iso',tmp/'result.iso','')
-        reject('already patched ISO rejected',args.base_v08,tmp/'result.iso','원본 크기')
+        reject('already patched ISO rejected',args.patched_input,tmp/'result.iso','원본 크기')
         assert not list(tmp.glob('*.partial'))
     output=args.output.resolve()
     assert not output.exists()
@@ -39,16 +39,28 @@ def main():
         result=json.loads(p.stdout);assert result['verified'] and result['sha256']==manifest['output']['sha256']
         assert output.stat().st_size==manifest['output']['bytes'] and sha(output)==manifest['output']['sha256']
         assert sha(args.source)==manifest['source']['sha256']
-        assert result['version']=='v0.801'
+        assert result['version']==manifest['version'] and result['stock_xbe_unchanged']
+        assert result['default_xbe_sha256']==manifest['integrated_default_xbe']['sha256']
         cases.append(dict(name='public EXE complete ISO reconstruction and independent SHA-256',status='passed'))
-        content=audit(args.base_v08,output)
-        assert content['integrated_xbe_sha256']==manifest['integrated_default_xbe']['sha256']
-        cases.append(dict(name='all ISO bytes and internal fixed XBE verified',status='passed'))
+        source_disc,target_disc=Disc(args.source),Disc(output)
+        try:
+            old={e['path']:e for e in source_disc.entries};new={e['path']:e for e in target_disc.entries}
+            assert old.keys()==new.keys()
+            assert old['default.xbe']==new['default.xbe']
+            s,t=old['default.xbe'],new['default.xbe']
+            a=source_disc.read(s['offset'],s['size']);b=target_disc.read(t['offset'],t['size'])
+            assert a==b and hashlib.sha256(b).hexdigest()==manifest['integrated_default_xbe']['sha256']
+            content=dict(status='passed',entries=len(old),default_xbe_bytes_identical_to_original=True,
+                         default_xbe_directory_record_unchanged=True,default_xbe_sha256=hashlib.sha256(b).hexdigest(),
+                         full_iso_hash_matches_independently_audited_target=True)
+        finally:source_disc.close();target_disc.close()
+        cases.append(dict(name='original XBE bytes and disc record preserved; complete ISO hash verified',status='passed'))
         report=dict(status='passed',cases=cases,source_preserved=True,original_iso_sha256=manifest['source']['sha256'],
                     reconstructed_iso_sha256=manifest['output']['sha256'],reconstructed_bytes=output.stat().st_size,
                     patcher_sha256=manifest['patcher']['sha256'],content_audit=content,game_runtime_tested=False)
-        (ROOT/'docs/verification/patcher-v0.801.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n','utf8')
-        for path in (ROOT/'release-manifest.json',ROOT/'release-manifest-v0.801.json',ROOT/'dist/release-manifest-v0.801.json'):
+        version=manifest['version']
+        (ROOT/f'docs/verification/patcher-{version}.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n','utf8')
+        for path in (ROOT/'release-manifest.json',ROOT/f'release-manifest-{version}.json',ROOT/f'dist/release-manifest-{version}.json'):
             data=json.loads(path.read_text('utf8'))
             data.update(windows_exe_roundtrip_verified=True,guards_passed=7,iso_content_audit_verified=True)
             path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n','utf8')

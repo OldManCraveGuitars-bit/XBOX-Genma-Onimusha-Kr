@@ -12,7 +12,7 @@ public static class VerifyPatcher {
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
         using(var form=new MainForm()) {
-            if(!form.Text.EndsWith("v0.801")) throw new Exception("Wrong form version");
+            if(!form.Text.EndsWith(GenmaKorean.Resources.Version)) throw new Exception("Wrong form version");
             foreach(Control control in form.Controls) {
                 if(control.Left<0 || control.Top<0 || control.Right>form.ClientSize.Width || control.Bottom>form.ClientSize.Height)
                     throw new Exception("Control outside form: "+control.Text);

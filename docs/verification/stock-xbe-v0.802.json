@@ -1,0 +1,254 @@
+{
+  "cpu": {
+    "status": "passed",
+    "stock_xbe_sha256": "149f8392db82bbe092ce9b042310373e4645fa898624f57eea55a0c145885216",
+    "xbe_file_and_instructions_unchanged": true,
+    "banks": 102,
+    "translation_rows": 3272,
+    "pages_executed": 3768,
+    "glyph_quads": 56730,
+    "out_of_frame": [],
+    "original_inventory_font_contexts_preserved": 295,
+    "native_texture_cases": 107,
+    "all_source_overreads_zero": true,
+    "loader_cases": 239,
+    "every_text_resource_binds_its_own_fc": true,
+    "all_script_copies_within_original_arena_budget": true,
+    "native_choice_cases": 28,
+    "choice_presentation": "original F3 high-bit current-pen path",
+    "gpu_driver_calls_stubbed": true,
+    "physical_boot_verified": false,
+    "full_gameplay_verified": false,
+    "seconds": 162.34
+  },
+  "documents": {
+    "status": "passed",
+    "stock_xbe_unmodified": true,
+    "document_cases": [
+      {
+        "file": "image/etc/FILE00.ldt",
+        "scroll_states": 23,
+        "ink_pixels": 28935,
+        "unreachable_ink_pixels": 0
+      },
+      {
+        "file": "image/etc/FILE01.ldt",
+        "scroll_states": 53,
+        "ink_pixels": 50176,
+        "unreachable_ink_pixels": 0
+      },
+      {
+        "file": "image/etc/FILE02.ldt",
+        "scroll_states": 1,
+        "ink_pixels": 11305,
+        "unreachable_ink_pixels": 0
+      },
+      {
+        "file": "image/etc/FILE03.ldt",
+        "scroll_states": 17,
+        "ink_pixels": 23512,
+        "unreachable_ink_pixels": 0
+      },
+      {
+        "file": "image/etc/FILE04.ldt",
+        "scroll_states": 22,
+        "ink_pixels": 30589,
+        "unreachable_ink_pixels": 0
+      },
+      {
+        "file": "image/etc/FILE05.ldt",
+        "scroll_states": 23,
+        "ink_pixels": 27190,
+        "unreachable_ink_pixels": 0
+      },
+      {
+        "file": "image/etc/FILE06.ldt",
+        "scroll_states": 13,
+        "ink_pixels": 20510,
+        "unreachable_ink_pixels": 0
+      },
+      {
+        "file": "image/etc/FILE07.ldt",
+        "scroll_states": 1,
+        "ink_pixels": 15921,
+        "unreachable_ink_pixels": 0
+      },
+      {
+        "file": "image/etc/FILE08.ldt",
+        "scroll_states": 1,
+        "ink_pixels": 12869,
+        "unreachable_ink_pixels": 0
+      },
+      {
+        "file": "image/etc/FILE09.ldt",
+        "scroll_states": 1,
+        "ink_pixels": 19146,
+        "unreachable_ink_pixels": 0
+      },
+      {
+        "file": "image/etc/FILE0A.ldt",
+        "scroll_states": 19,
+        "ink_pixels": 27994,
+        "unreachable_ink_pixels": 0
+      },
+      {
+        "file": "image/etc/FILE0B.ldt",
+        "scroll_states": 24,
+        "ink_pixels": 28222,
+        "unreachable_ink_pixels": 0
+      },
+      {
+        "file": "image/etc/FILE0C.ldt",
+        "scroll_states": 26,
+        "ink_pixels": 26651,
+        "unreachable_ink_pixels": 0
+      },
+      {
+        "file": "image/etc/FILE0D.ldt",
+        "scroll_states": 27,
+        "ink_pixels": 31261,
+        "unreachable_ink_pixels": 0
+      },
+      {
+        "file": "image/etc/FILE0E.ldt",
+        "scroll_states": 1,
+        "ink_pixels": 16090,
+        "unreachable_ink_pixels": 0
+      },
+      {
+        "file": "image/etc/FILE0F.ldt",
+        "scroll_states": 5,
+        "ink_pixels": 14676,
+        "unreachable_ink_pixels": 0
+      },
+      {
+        "file": "image/etc/FILE012.ldt",
+        "scroll_states": 53,
+        "ink_pixels": 50190,
+        "unreachable_ink_pixels": 0
+      },
+      {
+        "file": "image/etc/FILE013.ldt",
+        "scroll_states": 53,
+        "ink_pixels": 50190,
+        "unreachable_ink_pixels": 0
+      }
+    ],
+    "cipher_unlock_cases": 64,
+    "cipher_symbols_and_original_unlock_fragments_preserved": true,
+    "horizontal_korean_pages": true,
+    "unreachable_ink_pixels": 0,
+    "native_document_builder": "0x1672B5",
+    "native_cipher_builder": "0x166F70",
+    "gpu_submission_observed_only": true,
+    "physical_boot_verified": false,
+    "full_gameplay_verified": false
+  },
+  "captions": {
+    "status": "passed",
+    "stock_xbe_unmodified": true,
+    "native_movies": 2,
+    "variants": 8,
+    "native_frame_checks": 15376,
+    "original_timing_tables_and_blank_rows_preserved": true,
+    "native_clock_function": "0x1BA60",
+    "native_uv_formatter": "0x1B8C0",
+    "resource_binding_observed_only": true,
+    "additional_injected_opening_and_movie_captions": false,
+    "physical_boot_verified": false,
+    "checks": [
+      {
+        "file": "image/rdt/room508.rdt",
+        "movie": "links04",
+        "voice": 0,
+        "clock_frames": 602,
+        "native_timing_events": 7,
+        "blank_row_empty": true
+      },
+      {
+        "file": "image/rdt/room508.rdt",
+        "movie": "links04",
+        "voice": 1,
+        "clock_frames": 602,
+        "native_timing_events": 7,
+        "blank_row_empty": true
+      },
+      {
+        "file": "image/rdt2/room508.rdt",
+        "movie": "links04",
+        "voice": 0,
+        "clock_frames": 602,
+        "native_timing_events": 7,
+        "blank_row_empty": true
+      },
+      {
+        "file": "image/rdt2/room508.rdt",
+        "movie": "links04",
+        "voice": 1,
+        "clock_frames": 602,
+        "native_timing_events": 7,
+        "blank_row_empty": true
+      },
+      {
+        "file": "image/rdt/room201.rdt",
+        "movie": "links05",
+        "voice": 0,
+        "clock_frames": 3532,
+        "native_timing_events": 27,
+        "blank_row_empty": true
+      },
+      {
+        "file": "image/rdt/room201.rdt",
+        "movie": "links05",
+        "voice": 1,
+        "clock_frames": 2952,
+        "native_timing_events": 24,
+        "blank_row_empty": true
+      },
+      {
+        "file": "image/rdt2/room201.rdt",
+        "movie": "links05",
+        "voice": 0,
+        "clock_frames": 3532,
+        "native_timing_events": 27,
+        "blank_row_empty": true
+      },
+      {
+        "file": "image/rdt2/room201.rdt",
+        "movie": "links05",
+        "voice": 1,
+        "clock_frames": 2952,
+        "native_timing_events": 24,
+        "blank_row_empty": true
+      }
+    ]
+  },
+  "iso": {
+    "status": "passed",
+    "version": "v0.802",
+    "variant": "stock XBE data-only compatibility",
+    "source_sha256": "7f5af784f9b229c5d0061918e018a9052e328a5341efc7d9e1b5d36de5f58206",
+    "source_bytes": 4905566208,
+    "output_bytes": 5370583040,
+    "output_hashes": {
+      "md5": "44e548dce724d8f6c3ef046277a4426f",
+      "sha1": "bae3d37706b6e5b6a7e8836f0a26b17359c27e1a",
+      "sha256": "57af5fbffc41aa59656841b07492027570211e1ddeeacb27b865631ae4d50688"
+    },
+    "entries": 1820,
+    "changed_files": 484,
+    "unexpected_changed_bytes": 0,
+    "all_original_xbe_extents_untouched": true,
+    "default_xbe_sha256": "149f8392db82bbe092ce9b042310373e4645fa898624f57eea55a0c145885216",
+    "default_xbe_bytes": 2367488,
+    "default_xbe_sections": 23,
+    "default_xbe_directory_record_unchanged": true,
+    "physical_boot_verified": false,
+    "output_name": "XBOX-Genma-Onimusha-Kr-v0.802.iso"
+  },
+  "version": "v0.802",
+  "scope": "Genma only; Fatal Frame II excluded",
+  "stock_xbe_unchanged": true,
+  "fixed_ui_rows_retained_in_original_japanese": 327,
+  "added_opening_movie_and_credit_hooks": false
+}
