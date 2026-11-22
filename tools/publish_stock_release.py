@@ -2,6 +2,7 @@
 import hashlib
 import json
 import subprocess
+import time
 import urllib.request
 from pathlib import Path
 
@@ -10,7 +11,10 @@ REPO='OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr'
 
 
 def gh(*args):
-    return subprocess.check_output(['gh',*map(str,args)],cwd=ROOT,text=True,encoding='utf8')
+    args=list(map(str,args))
+    if len(args)>1 and args[0]=='api' and args[1].startswith('repos/'):
+        args[1]+=('&' if '?' in args[1] else '?')+'request_nonce='+str(time.time_ns())
+    return subprocess.check_output(['gh',*args],cwd=ROOT,text=True,encoding='utf8')
 
 
 def git(*args):
