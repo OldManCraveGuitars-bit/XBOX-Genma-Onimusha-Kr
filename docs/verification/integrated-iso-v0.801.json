@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "entries": 1820,
+  "files": 1743,
+  "changed_directory_entries": [
+    "default.xbe"
+  ],
+  "all_other_iso_bytes_preserved": true,
+  "unexpected_changed_bytes": 0,
+  "integrated_xbe_sha256": "81a65ca47a0e5d72944895a7b0aa0eee609689c1aa0896041ce3c1a95f45664c",
+  "integrated_xbe_bytes": 3510272,
+  "integrated_xbe_sections": 23,
+  "external_xbe_replacement_required": false,
+  "physical_xbox_verified": false,
+  "version": "v0.801",
+  "source": {
+    "bytes": 4905566208,
+    "md5": "c6c38cc8f904882fb5f44736474c487d",
+    "sha1": "69c244b4fa40f3cacd684a72331305bec58406d8",
+    "sha256": "7f5af784f9b229c5d0061918e018a9052e328a5341efc7d9e1b5d36de5f58206"
+  },
+  "base": {
+    "bytes": 5385351168,
+    "md5": "878267f222c58a380121f93197d954b7",
+    "sha1": "cc48b8922e2476c27c17d500e0376b4c26020608",
+    "sha256": "dbd207078fc41095afe805743277676214fc6e71d2cce2db30f0b161dc0f8dc2"
+  },
+  "output": {
+    "name": "integrated-v0.801.iso",
+    "bytes": 5388861440,
+    "md5": "d4edfb283af0734bef9d67d6322d5012",
+    "sha1": "262e31227484a55aede6624458b439225e55af2f",
+    "sha256": "189e10e695429dc212a70efc6f31a9dfdc41a18c50ecccad90d735d1a2a0468e"
+  }
+}

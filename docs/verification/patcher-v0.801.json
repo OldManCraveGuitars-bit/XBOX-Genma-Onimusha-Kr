@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "name": "same source and output",
+      "status": "passed"
+    },
+    {
+      "name": "existing output preserved",
+      "status": "passed"
+    },
+    {
+      "name": "wrong source size",
+      "status": "passed"
+    },
+    {
+      "name": "wrong output extension",
+      "status": "passed"
+    },
+    {
+      "name": "missing output directory",
+      "status": "passed"
+    },
+    {
+      "name": "missing source",
+      "status": "passed"
+    },
+    {
+      "name": "already patched ISO rejected",
+      "status": "passed"
+    },
+    {
+      "name": "public EXE complete ISO reconstruction and independent SHA-256",
+      "status": "passed"
+    },
+    {
+      "name": "all ISO bytes and internal fixed XBE verified",
+      "status": "passed"
+    }
+  ],
+  "source_preserved": true,
+  "original_iso_sha256": "7f5af784f9b229c5d0061918e018a9052e328a5341efc7d9e1b5d36de5f58206",
+  "reconstructed_iso_sha256": "189e10e695429dc212a70efc6f31a9dfdc41a18c50ecccad90d735d1a2a0468e",
+  "reconstructed_bytes": 5388861440,
+  "patcher_sha256": "526aa3fc2d91ebbef3b1ee25bd8b14d81799e9100975dfd0a82b6cbd1076bfd3",
+  "content_audit": {
+    "status": "passed",
+    "entries": 1820,
+    "files": 1743,
+    "changed_directory_entries": [
+      "default.xbe"
+    ],
+    "all_other_iso_bytes_preserved": true,
+    "unexpected_changed_bytes": 0,
+    "integrated_xbe_sha256": "81a65ca47a0e5d72944895a7b0aa0eee609689c1aa0896041ce3c1a95f45664c",
+    "integrated_xbe_bytes": 3510272,
+    "integrated_xbe_sections": 23,
+    "external_xbe_replacement_required": false,
+    "physical_xbox_verified": false
+  },
+  "game_runtime_tested": false
+}

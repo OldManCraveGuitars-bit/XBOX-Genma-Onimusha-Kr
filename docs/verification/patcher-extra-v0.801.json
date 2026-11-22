@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "patcher_sha256": "526aa3fc2d91ebbef3b1ee25bd8b14d81799e9100975dfd0a82b6cbd1076bfd3",
+  "test_source": "tools/VerifyPatcher.cs",
+  "form_controls_within_client_area": true,
+  "cancel_during_actual_iso_generation": true,
+  "partial_output_removed": true,
+  "physical_xbox_verified": false
+}

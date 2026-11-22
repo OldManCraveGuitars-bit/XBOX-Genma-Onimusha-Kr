@@ -1,6 +1,6 @@
 # r15 실기 호환성 데이터 검사
 
-아래는 내부 개발본의 검수 기록입니다. 현재 v0.8 공개 배포물과 해시는 [HASHES.md](../HASHES.md)를 기준으로 확인하세요. 기록의 `GenmaKoreanTool-r15.exe`는 개발용 편집기이며, 공개 배포하는 Windows 패처와 별개입니다.
+아래는 v0.8 기반 내부 개발본 r15의 검수 기록입니다. [v0.8 파일 해시](releases/HASHES-v0.8.md)와 구분하여 읽어 주세요. 현재 v0.801은 수정 XBE를 포함하는 [통합 ISO 패처](../README.md)이며, 23개 섹션 XBE의 [출력 검사](verification/hdd-text-fix.json)와 [통합 ISO 검사](verification/patcher-v0.801.json)를 별도로 제공합니다. 기록의 `GenmaKoreanTool-r15.exe`는 개발용 편집기입니다.
 
 데이터 검사 중 **확대 한글 글꼴의 범위 밖 읽기 1종**을 확인해 수정했습니다. 원문 번역, 이미지, 자막 내용은 r14 그대로이며 배포 데이터 변경은 `default.xbe` 한 파일입니다. 아래 결과는 파일·주소·원본 x86 루틴 검사이며 실기 실행 결과를 뜻하지 않습니다.
 

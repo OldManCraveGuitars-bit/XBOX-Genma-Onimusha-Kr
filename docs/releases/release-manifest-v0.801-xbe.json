@@ -1,0 +1,27 @@
+{
+  "version": "v0.801",
+  "base_version": "v0.8",
+  "release_type": "test XBE replacement update",
+  "repository": "https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr",
+  "requires_existing_korean_v08_game_folder": true,
+  "original_iso_included": false,
+  "default_xbe": {
+    "bytes": 3510272,
+    "md5": "64aa95135c90775dff7804accb930088",
+    "sha1": "ec1e339942a9b96937766ee1c1165af07e7808bd",
+    "sha256": "81a65ca47a0e5d72944895a7b0aa0eee609689c1aa0896041ce3c1a95f45664c"
+  },
+  "archive": {
+    "name": "XBOX-Genma-Onimusha-Kr-v0.801.zip",
+    "bytes": 1447602,
+    "md5": "59e2836f344852e1ec63fde907f3530e",
+    "sha1": "05472a68fff14dcf0507bb57d9ddc61974d69f60",
+    "sha256": "ad65beb933ef3ce78c5e13e0c4f215ecdf155acbfe1ec3fc0f1c0c57e92a997e"
+  },
+  "original_layout_sections": 23,
+  "native_output_conditions": 5219,
+  "body_pages": 3768,
+  "code_or_translation_changed_since_verified_fix": false,
+  "korean_output_verified": true,
+  "physical_boot_verified": false
+}

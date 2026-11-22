@@ -1,27 +1,84 @@
 {
   "version": "v0.801",
-  "base_version": "v0.8",
-  "release_type": "test XBE replacement update",
+  "release_type": "integrated single ISO patcher",
   "repository": "https://github.com/OldManCraveGuitars-bit/XBOX-Genma-Onimusha-Kr",
-  "requires_existing_korean_v08_game_folder": true,
-  "original_iso_included": false,
-  "default_xbe": {
+  "internal_content_revision": "20261121-r16 + verified v0.801 original-layout XBE",
+  "source": {
+    "name": "Genma Onimusha (Japan) (En,Ja).iso",
+    "bytes": 4905566208,
+    "md5": "c6c38cc8f904882fb5f44736474c487d",
+    "sha1": "69c244b4fa40f3cacd684a72331305bec58406d8",
+    "sha256": "7f5af784f9b229c5d0061918e018a9052e328a5341efc7d9e1b5d36de5f58206"
+  },
+  "output": {
+    "name": "XBOX-Genma-Onimusha-Kr-v0.801.iso",
+    "bytes": 5388861440,
+    "md5": "d4edfb283af0734bef9d67d6322d5012",
+    "sha1": "262e31227484a55aede6624458b439225e55af2f",
+    "sha256": "189e10e695429dc212a70efc6f31a9dfdc41a18c50ecccad90d735d1a2a0468e"
+  },
+  "patch": {
+    "name": "XBOX-Genma-Onimusha-Kr-v0.801.xdelta",
+    "bytes": 146561873,
+    "md5": "faf95c8249e893cdceb28678034dbb13",
+    "sha1": "007b4adf15ad3b29bdec0d268d943c92ab477cad",
+    "sha256": "5b9737868641cc105f3850cfca8bfefb70c60e7d7df47dcaab7ea9bea8ce71b9"
+  },
+  "patcher": {
+    "name": "XBOX-Genma-Onimusha-Kr-v0.801-Patcher.exe",
+    "bytes": 146926592,
+    "md5": "55b0f2e3c2432da6d498bdb74c2e4820",
+    "sha1": "9f8d3768e333bee9a019d5c1e97c4063c7818b81",
+    "sha256": "526aa3fc2d91ebbef3b1ee25bd8b14d81799e9100975dfd0a82b6cbd1076bfd3"
+  },
+  "decoder": {
+    "version": "3.2.1",
+    "bytes": 340480,
+    "md5": "5652c9f7d0119318ce694b8131317208",
+    "sha1": "8547d2c6d252f0f692f0b91960ac5bde05118015",
+    "sha256": "2081fb24a7b8a89d068b58e7d9353647d5fc1512a68bb6a37f71fc60ca84d943"
+  },
+  "integrated_default_xbe": {
     "bytes": 3510272,
-    "md5": "64aa95135c90775dff7804accb930088",
-    "sha1": "ec1e339942a9b96937766ee1c1165af07e7808bd",
-    "sha256": "81a65ca47a0e5d72944895a7b0aa0eee609689c1aa0896041ce3c1a95f45664c"
+    "sha256": "81a65ca47a0e5d72944895a7b0aa0eee609689c1aa0896041ce3c1a95f45664c",
+    "sections": 23
   },
-  "archive": {
-    "name": "XBOX-Genma-Onimusha-Kr-v0.801.zip",
-    "bytes": 1447602,
-    "md5": "59e2836f344852e1ec63fde907f3530e",
-    "sha1": "05472a68fff14dcf0507bb57d9ddc61974d69f60",
-    "sha256": "ad65beb933ef3ce78c5e13e0c4f215ecdf155acbfe1ec3fc0f1c0c57e92a997e"
-  },
-  "original_layout_sections": 23,
+  "requires_existing_korean_v08_game_folder": false,
+  "external_xbe_replacement_required": false,
   "native_output_conditions": 5219,
-  "body_pages": 3768,
-  "code_or_translation_changed_since_verified_fix": false,
-  "korean_output_verified": true,
-  "physical_boot_verified": false
+  "physical_xbox_verified": false,
+  "full_gameplay_verified": false,
+  "assets": [
+    {
+      "name": "XBOX-Genma-Onimusha-Kr-v0.801-Patcher.exe",
+      "bytes": 146926592,
+      "md5": "55b0f2e3c2432da6d498bdb74c2e4820",
+      "sha1": "9f8d3768e333bee9a019d5c1e97c4063c7818b81",
+      "sha256": "526aa3fc2d91ebbef3b1ee25bd8b14d81799e9100975dfd0a82b6cbd1076bfd3"
+    },
+    {
+      "name": "XBOX-Genma-Onimusha-Kr-v0.801-Windows-Patcher.zip",
+      "bytes": 146779716,
+      "md5": "b4206003659f9562e585bde9d609c40e",
+      "sha1": "c3da9dc846eb969ecbe17bca1d33acfe3a384d08",
+      "sha256": "7abf6b8ca611e5f731070ca6e8a10b3bb9e453c71a62255dcf39eb1c41bbe3d2"
+    },
+    {
+      "name": "XBOX-Genma-Onimusha-Kr-v0.801.xdelta",
+      "bytes": 146561873,
+      "md5": "faf95c8249e893cdceb28678034dbb13",
+      "sha1": "007b4adf15ad3b29bdec0d268d943c92ab477cad",
+      "sha256": "5b9737868641cc105f3850cfca8bfefb70c60e7d7df47dcaab7ea9bea8ce71b9"
+    },
+    {
+      "name": "XBOX-Genma-Onimusha-Kr-v0.801-HASHES.txt",
+      "bytes": 543,
+      "md5": "8bbffde0e4d907d25939d5315613b526",
+      "sha1": "36086ce20e2da089c8fc4114bc4380f17d6638b9",
+      "sha256": "5f8853d66b577032804b5150b613c57c874ea0eea37b82981e93a3f9b153c539"
+    }
+  ],
+  "windows_exe_roundtrip_verified": true,
+  "guards_passed": 7,
+  "iso_content_audit_verified": true
 }
